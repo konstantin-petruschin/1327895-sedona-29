@@ -1,5 +1,5 @@
 @use "../mixins/media.scss" as m;
-@use "../comman/variables.scss" as v;
+@use "variables.scss" as v;
 
 img {
   max-width: 100%;
@@ -32,8 +32,8 @@ img {
 .page__body {
   margin: 0;
   padding: 0;
-  color: #444444;
-  font-family: "Lato-Regular", sans-serif;
+  color: v.$color-text;
+  font-family: "PT-Sans", sans-serif;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -41,6 +41,7 @@ img {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  text-transform: uppercase;
 
   @include m.tablet {
     font-size: 16px;
