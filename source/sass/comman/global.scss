@@ -1,0 +1,85 @@
+@use "../mixins/media.scss" as m;
+@use "../comman/variables.scss" as v;
+
+img {
+  max-width: 100%;
+  object-fit: cover;
+  height: auto;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.page {
+  margin: 0;
+  height: 1px;
+}
+
+.page__body {
+  margin: 0;
+  padding: 0;
+  color: #444444;
+  font-family: "Lato-Regular", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  @include m.tablet {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+main {
+  flex: 1;
+}
+
+.container {
+  max-width: v.$phone;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  @include m.tablet {
+    max-width: v.$tablet;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  @include m.desktop {
+    max-width: v.$desktop;
+    padding-left: 110px;
+    padding-right: 110px;
+  }
+
+  &--form {
+    @include m.tablet {
+      padding-left: 70px;
+      padding-right: 70px;
+    }
+
+    @include m.desktop {
+      padding-left: 110px;
+      padding-right: 110px;
+    }
+  }
+}
