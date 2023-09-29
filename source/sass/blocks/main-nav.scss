@@ -1,0 +1,35 @@
+@use "../mixins/media.scss" as m;
+@use "../comman/variables.scss" as v;
+
+.main-nav {
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: none;
+  text-align: center;
+}
+
+.main-nav__list {
+  margin: 0;
+  padding: 0;
+  background-color: v.$color-primary;
+  list-style: none;
+}
+
+.main-nav__item {
+  margin-bottom: 1px;
+}
+
+.main-nav__link {
+  width: 100%;
+  display: inline-block;
+  margin: 0 auto;
+  padding-top: 17px;
+  padding-bottom: 12px;
+  box-shadow: 0 1px 0 0 rgba(1, 1, 1, 0.2), 0 1px 0 0 rgba(255, 255, 255, 0.2) inset;
+  text-decoration: none;
+  font-weight: 700;
+  color: v.$color-secondary;
+}

@@ -9,7 +9,7 @@
   </head>
   <body class="page__body">
     <header class="main-header">
-      <div class="main-header__wrapper">
+      <div class="main-header__wrapper container">
         <a class="main-header__logo">
           <img class="main-header__logo-img" src="./img/logo.svg" alt="Логотип Sedona.">
         </a>
@@ -19,16 +19,16 @@
         <nav class="main-header__nav main-nav">
           <ul class="main-nav__list">
             <li class="main-nav__item">
-              <a class="main-nav-link">Главная</a>
+              <a class="main-nav__link">Главная</a>
             </li>
             <li class="main-nav__item">
-              <a href="catalog.html" class="main-nav-link">Фото и видео</a>
+              <a href="catalog.html" class="main-nav__link">Фото и видео</a>
             </li>
             <li class="main-nav__item">
-              <a href="form.html" class="main-nav-link">Форма Отзыва</a>
+              <a href="form.html" class="main-nav__link">Форма Отзыва</a>
             </li>
             <li class="main-nav__item">
-              <a href="" class="main-nav-link">HTML ACADEMY</a>
+              <a href="" class="main-nav__link">HTML ACADEMY</a>
             </li>
           </ul>
         </nav>
@@ -37,11 +37,15 @@
     <main class="page__main">
       <h1 class="visually-hidden">О Седоне.</h1>
       <section class="page-main__promo promo">
-        <h2 class="visually-hidden">Добро пожаловать в Седону.</h2>
+        <div class="promo__wrapper container">
+          <h2 class="visually-hidden">Добро пожаловать в Седону.</h2>
+        </div>
       </section>
       <section class="page-main__advantages advantages">
-        <h2 class="advantages__title title">СЕДОНА — небольшой городок в Аризоне, заслуживающий большего!</h2>
+        <div class="advantages__wrapper container">
+          <h2 class="advantages__title title">СЕДОНА — небольшой городок в Аризоне, заслуживающий большего!</h2>
         <p class="advantages__text">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
+        </div>
         <ol class="advantages__list">
           <li class="advantages__item">
             <h3 class="advantages__title title">Настоящий городок</h3>
