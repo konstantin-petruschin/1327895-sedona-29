@@ -5,7 +5,7 @@ import postcss from 'gulp-postcss';
 import csso from 'postcss-csso';
 import rename from 'gulp-rename';
 import autoprefixer from 'autoprefixer';
-import browser from 'browser-sync';
+import browser, { create } from 'browser-sync';
 import htmlmin from 'gulp-htmlmin';
 
 // Styles
@@ -23,10 +23,22 @@ export const styles = () => {
     .pipe(browser.stream());
 }
 
+//HTML
+
  export const html = () => {
   return gulp.src('source/*.html')
   .pipe(htmlmin({collapseWhitespace: true}))
   .pipe(gulp.dest('build'));
+}
+
+//Scripts
+
+const scripts = () => {
+  return gulp.src('source/js/*.js')
+  .pipe()
+  .pipe(terser())
+  .pipe(gulp.dest('build/js'));
+
 }
 
 // Server
@@ -50,7 +62,38 @@ const watcher = () => {
   gulp.watch('source/*.html').on('change', browser.reload);
 }
 
+// Build
 
+export const build = gulp.series(
+  clean,
+  copy,
+  opimizeImages,
+  gulp.parallel(
+    styles,
+    html,
+    scripts,
+    svgTask,
+    sprite,
+    createWebp
+  ),
+);
+
+
+// Default
 export default gulp.series(
-  styles, server, watcher
+  clean,
+  copy,
+  copyImages,
+  gulp.parallel(
+  styles,
+  html,
+  scripts,
+  svg,
+  sprite,
+  createWebp
+  ),
+  gulp.series (
+  server,
+  watcher
+  )
 );
