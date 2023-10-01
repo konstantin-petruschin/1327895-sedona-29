@@ -8,7 +8,8 @@ import autoprefixer from 'autoprefixer';
 import browser from 'browser-sync';
 import htmlmin from 'gulp-htmlmin';
 import terser from 'gulp-terser';
-import squoosh from 'gulp-libsquoosh'
+import squoosh from 'gulp-libsquoosh';
+import svgo from 'gulp-svgo';
 
 // Styles
 const styles = (done) => {
@@ -68,6 +69,15 @@ const createWebp = (done) => {
   }))
   .pipe(gulp.dest('build/img'));
 done()
+}
+
+// svg
+
+const svgTask = (done) => {
+  gulp.src(['source/img/**/*.svg', '!source/img/sprites/*.svg'])
+  .pipe(svgo())
+  .pipe(gulp.dest('build/img'));
+  done()
 }
 
 // Server
