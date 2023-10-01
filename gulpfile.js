@@ -5,13 +5,14 @@ import postcss from 'gulp-postcss';
 import csso from 'postcss-csso';
 import rename from 'gulp-rename';
 import autoprefixer from 'autoprefixer';
-import browser, { create } from 'browser-sync';
+import browser from 'browser-sync';
 import htmlmin from 'gulp-htmlmin';
+import terser from 'gulp-terser';
+import squoosh from 'gulp-libsquoosh'
 
 // Styles
-
-export const styles = () => {
-  return gulp.src('source/sass/style.scss', { sourcemaps: true })
+const styles = (done) => {
+  gulp.src('source/sass/style.scss', { sourcemaps: true })
     .pipe(plumber())
     .pipe(sass().on('error', sass.logError))
     .pipe(postcss([
@@ -21,24 +22,52 @@ export const styles = () => {
     .pipe(rename('styles.min.css'))
     .pipe(gulp.dest('build/css', { sourcemaps: '.' }))
     .pipe(browser.stream());
+  done()
 }
 
 //HTML
 
- export const html = () => {
-  return gulp.src('source/*.html')
+const html = (done) => {
+  gulp.src('source/*.html')
   .pipe(htmlmin({collapseWhitespace: true}))
   .pipe(gulp.dest('build'));
+  done()
 }
 
 //Scripts
 
-const scripts = () => {
-  return gulp.src('source/js/*.js')
+const scripts = (done) => {
+gulp.src('source/js/*.js')
   .pipe()
   .pipe(terser())
   .pipe(gulp.dest('build/js'));
+done()
+}
 
+// Images
+
+const opimizeImages = (done) => {
+  gulp.src('source/img/**/*.{jpg,png}')
+  .pipe(squoosh())
+  .pipe(gulp.dest('build/img'));
+done()
+}
+
+const copyImages = (done) => {
+  gulp.src('source/img/**/*.{jpg,png}')
+  .pipe(gulp.dest('build/img'));
+done()
+}
+
+// Webp
+
+const createWebp = (done) => {
+  gulp.src('source/img/**/*{jpg,png}')
+  .pipe(squoosh ({
+    webp: {}
+  }))
+  .pipe(gulp.dest('build/img'));
+done()
 }
 
 // Server
@@ -46,7 +75,7 @@ const scripts = () => {
 const server = (done) => {
   browser.init({
     server: {
-      baseDir: 'source'
+      baseDir: 'build'
     },
     cors: true,
     notify: false,
@@ -65,7 +94,7 @@ const watcher = () => {
 // Build
 
 export const build = gulp.series(
-  clean,
+
   copy,
   opimizeImages,
   gulp.parallel(
@@ -81,7 +110,7 @@ export const build = gulp.series(
 
 // Default
 export default gulp.series(
-  clean,
+
   copy,
   copyImages,
   gulp.parallel(
