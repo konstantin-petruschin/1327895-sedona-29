@@ -101,7 +101,7 @@ const copy = (done) => {
   gulp.src([
     'source/fonts/*.{woff,woff2}',
     'source/*.ico',
-    'source/manifest.webmanifest'
+    //'source/manifest.webmanifest'
   ], {
     base: 'source'
   })
