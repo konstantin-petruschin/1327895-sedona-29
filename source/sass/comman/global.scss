@@ -1,5 +1,5 @@
 @use "../mixins/media.scss" as m;
-@use "variables.scss" as v;
+@use "../comman/variables.scss" as v;
 
 img {
   max-width: 100%;

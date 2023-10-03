@@ -22,7 +22,7 @@ export const styles = (done) => {
       autoprefixer(),
       csso()
     ]))
-    .pipe(rename('styles.min.css'))
+    .pipe(rename('style.min.css'))
     .pipe(gulp.dest('build/css', { sourcemaps: '.' }))
     .pipe(browser.stream());
 done();
@@ -99,8 +99,8 @@ done();
 
 const copy = (done) => {
   gulp.src([
-    'source/fonts/*.{woff,woff2}',
-    'source/*.ico',
+    'source/fonts/*.{woff,woff2}'
+    // 'source/*.ico',
     //'source/manifest.webmanifest'
   ], {
     base: 'source'
@@ -126,6 +126,7 @@ const server = (done) => {
     cors: true,
     notify: false,
     ui: false,
+    open: false
   });
 done();
 }
