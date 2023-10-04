@@ -1,0 +1,27 @@
+.promo {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    background-image: url("../img/promo-bottom-mobile.svg");
+    background-repeat: no-repeat;
+    left: 0;
+    right: 0;
+    width: 160px;
+    height: 57px;
+    content: "";
+    bottom: 0;
+    z-index: 6;
+    display: inline-block;
+  }
+}
+
+.promo__slogan {
+  position: absolute;
+  z-index: 2;
+  top: 70px;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+}

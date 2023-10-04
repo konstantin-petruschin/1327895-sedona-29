@@ -1,5 +1,12 @@
+@use "../comman/variables.scss" as v;
+
+.advantages {
+  padding-top: 32px;
+}
+
 .advantages__title {
   margin-bottom: 35px;
+  max-width: 270px;
 }
 
 .advantages__list {
@@ -8,12 +15,56 @@
   list-style: none;
 }
 
+.advantages__item {
+  &--image {
+    background-color: v.$color-primary;
+    color: v.$color-secondary;
+  }
+}
+
+.advantages__image {
+  display: block;
+}
+
 .advantages__services {
   margin: 0;
-  padding: 0;
   text-align: left;
-  padding-left: 47px;
   list-style: none;
+  background-color: v.$color-secondary;
+  color: v.$color-text;
+}
+
+.advantages__services-item {
+  position: relative;
+  padding-left: 45px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    display: block;
+    top: 0;
+    left: 0;
+    transform: translateY(-25%);
+    background-repeat: no-repeat;
+  }
+
+  &--housing::before {
+    background-image: url("../img/icons/icon-house.svg");
+    width: 39px;
+    height: 37px;
+  }
+
+  &--eat::before {
+    background-image: url("../img/icons/icon-burger.svg");
+    width: 40px;
+    height: 35px;
+  }
+
+  &--souvenirs::before {
+    background-image: url("../img/icons/icon-gift.svg");
+    width: 32px;
+    height: 38px;
+  }
 }
 
 .advantages__text {
