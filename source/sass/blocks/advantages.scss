@@ -16,10 +16,19 @@
 }
 
 .advantages__item {
+  background-color: v.$color-background;
+  padding-top: 33px;
+  padding-bottom: 40px;
+
   &--image {
     background-color: v.$color-primary;
     color: v.$color-secondary;
+    padding-bottom: 0;
   }
+}
+
+.advantage__item-wrapper {
+  border-bottom: 1px solid v.$color-border;
 }
 
 .advantages__image {
@@ -28,6 +37,8 @@
 
 .advantages__services {
   margin: 0;
+  padding-top: 25px;
+  padding-bottom: 25px;
   text-align: left;
   list-style: none;
   background-color: v.$color-secondary;
@@ -37,6 +48,10 @@
 .advantages__services-item {
   position: relative;
   padding-left: 45px;
+
+  &:not(:last-child) {
+    margin-bottom: 25px;
+  }
 
   &::before {
     position: absolute;
