@@ -1,6 +1,8 @@
+@use "../comman/variables.scss" as v;
+
 .title {
   font-weight: 700;
-  color: #000000;
+  color: v.$color-title;
   font-size: 18px;
   margin: 0;
   padding: 0;

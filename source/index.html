@@ -67,11 +67,11 @@
         <p class="advantages__text">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
       </div>
       <ol class="advantages__list">
-        <li class="advantages__item  advantages__item--bridge">
-          <div class="advantages__item-wrapper advantages__item-wrapper--back">
+        <li class="advantages__item  advantages__item--back">
+          <div class="advantages__item-wrapper advantages__item-wrapper--city">
             <h3 class="advantages__name title">Настоящий городок</h3>
             <span class="advantages__number">-№1-</span>
-            <p class="advantages__description">Седона не аттракцион для туристов, тут течет своя жизнь</p>
+            <p class="advantages__description">Седона не аттракцион для туристов, там течет своя жизнь</p>
           </div>
           <picture>
             <source type="image/webp" media="(min-width: 1200px)"
@@ -101,8 +101,8 @@
             </li>
           </ul>
         </li>
-        <li class="advantages__item  advantages__item--bridge">
-          <div class="advantages__item-wrapper advantages__item-wrapper--back">
+        <li class="advantages__item  advantages__item--back">
+          <div class="advantages__item-wrapper advantages__item-wrapper--bridge">
             <h3 class="advantages__name title">Там есть мост дьявола</h3>
             <span class="advantages__number">-№2-</span>
             <p class="advantages__description">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
@@ -154,26 +154,40 @@
       <h2 class="visually-hidden">Седона на карте.</h2>
     </section>
   </main>
-  <footer class="footer">
+  <footer class="footer container">
     <a class="footer__hashtag" href="#">#visitSEDONA</a>
     <ul class="footer__socials">
       <li class="footer__social-item">
-        <span class="visually-hidden">Мы в контакте.</span>
-        <a class="footer__social-link" href="https://vk.com/htmlacademy"></a>
+
+        <a class="footer__social-link" href="https://vk.com/htmlacademy">
+          <span class="visually-hidden">Мы в контакте.</span>
+        <svg class="footer__icon" width="24" height="14" role="img">
+          <use xlink:href="img/sprites/sprite.svg#vk"></use>
+        </svg>
+        </a>
       </li>
       <li class="footer__social-item">
         <a class="footer__social-link" href="https://t.me/htmlacademy">
           <span class="visually-hidden">Мы в телеграмме.</span>
+          <svg class="footer__icon" width="22" height="18" role="img">
+            <use xlink:href="img/sprites/sprite.svg#telegram"></use>
+          </svg>
         </a>
       </li>
       <li class="footer__social-item">
         <a class="footer__social-link" href="https://www.youtube.com/user/htmlacademyru">
           <span class="visually-hidden">Мы на Youtube.</span>
+          <svg class="footer__icon" width="20" height="14" role="img">
+            <use xlink:href="img/sprites/sprite.svg#youtube"></use>
+          </svg>
         </a>
       </li>
     </ul>
     <a class="footer__developer" href="https://htmlacademy.ru/">
       <span class="footer__developer-text">Разработано</span>
+      <svg class="footer__icon" width="29" height="35" role="img">
+        <use xlink:href="img/sprites/sprite.svg#developer-logo"></use>
+      </svg>
     </a>
   </footer>
 </body>
