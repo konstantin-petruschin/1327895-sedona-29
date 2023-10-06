@@ -1,3 +1,5 @@
+@use "../mixins/media.scss" as m;
+
 .main-header {
   position: relative;
   text-align: center;
@@ -9,11 +11,16 @@
 
 .main-header__toggle {
   position: absolute;
+  display: inline-block;
   top: 17px;
   right: 20px;
   border: none;
   width: 23px;
   height: 22px;
+
+  @include m.tablet {
+    display: none;
+  }
 }
 
 .main-header__logo {

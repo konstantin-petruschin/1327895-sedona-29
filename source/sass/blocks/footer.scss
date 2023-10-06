@@ -9,6 +9,27 @@
   padding-bottom: 33px;
 }
 
+.footer__hashtag {
+  font-size: 21px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 26px;
+  text-transform: uppercase;
+  color: v.$color-title;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    outline: none;
+    color: v.$color-primary;
+  }
+
+  &:active {
+    background-color: v.$color-primary-active;
+  }
+}
+
+
 .footer__socials {
   margin: 0;
   padding: 0;
