@@ -11,6 +11,14 @@
   margin-right: auto;
   line-height: 26px;
 
+  &--big {
+    font-size: 21px;
+  }
+
+  &--back {
+    color: v.$color-secondary;
+  }
+
   @include m.tablet {
     font-size: 21px;
   }

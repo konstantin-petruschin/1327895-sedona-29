@@ -40,22 +40,11 @@
 }
 
 .footer__social-link {
-  background-color: v.$color-primary;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 48px;
   height: 48px;
-
-  &:hover,
-  &:focus {
-    outline: none;
-    background-color: v.$color-primary-hover;
-  }
-
-  &:active {
-    background-color: v.$color-primary-active;
-  }
 }
 
 .footer__social-link:active .footer__icon {

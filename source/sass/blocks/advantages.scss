@@ -65,10 +65,6 @@
   border-bottom: 1px solid v.$color-border;
   padding: 24px 12px;
 
-  // &:last-child {
-  //   border-bottom: none;
-  // }
-
   &--city {
     position: relative;
     padding-top: 54px;
@@ -79,6 +75,10 @@
     padding-top: 37px;
     padding-bottom: 37px;
   }
+}
+
+.advantages__item:last-child .advantages__item-wrapper {
+  border: none;
 }
 
 .advantages__image {
