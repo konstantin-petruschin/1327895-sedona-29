@@ -9,6 +9,11 @@
   width: 100%;
   display: none;
   text-align: center;
+
+  @include m.tablet {
+    position: static;
+    display: block;
+  }
 }
 
 .main-nav__list {
@@ -16,6 +21,13 @@
   padding: 0;
   background-color: v.$color-primary;
   list-style: none;
+
+  @include m.tablet {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr) 185px repeat(2, 1fr);
+    width: 100%;
+    background-color: v.$color-secondary;
+  }
 }
 
 .main-nav__item {
@@ -32,4 +44,9 @@
   text-decoration: none;
   font-weight: 700;
   color: v.$color-secondary;
+
+  @include m.tablet {
+    color: v.$color-title;
+    box-shadow: none;
+  }
 }

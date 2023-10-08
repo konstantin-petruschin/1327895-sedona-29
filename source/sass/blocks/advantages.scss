@@ -34,6 +34,12 @@
   margin: 0;
   padding: 0;
   list-style: none;
+
+  @include m.tablet {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
 }
 
 .advantages__item {
@@ -41,6 +47,8 @@
   position: relative;
   padding-right: 20px;
   padding-left: 20px;
+  display: grid;
+
 
   &--back {
     background-color: v.$color-primary;
@@ -54,16 +62,34 @@
     display: block;
     background-image: url("../img/background-advantages.svg");
     background-repeat: no-repeat;
-    top: 0;
+    top: -1px;
     width: 320px;
     height: 37px;
     z-index: 5;
+
+
+    @include m.tablet {
+      display: none;
+    }
+  }
+}
+
+.advantages__item-container {
+  @include m.tablet {
+    display: flex;
   }
 }
 
 .advantages__item-wrapper {
-  border-bottom: 1px solid v.$color-border;
   padding: 24px 12px;
+
+  &--no-back {
+    border-bottom: 1px solid v.$color-border;
+
+    @include m.tablet {
+      border: none;
+    }
+  }
 
   &--city {
     position: relative;
@@ -77,7 +103,7 @@
   }
 }
 
-.advantages__item:last-child .advantages__item-wrapper {
+.advantages__item:last-child .advantages__item-wrapper--no-back {
   border: none;
 }
 
@@ -93,14 +119,28 @@
   list-style: none;
   background-color: v.$color-secondary;
   color: v.$color-text;
+
+  @include m.tablet {
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .advantages__services-item {
   position: relative;
   padding-left: 45px;
 
+  @include m.tablet {
+    padding: 156px 33px 60px;
+  }
+
   &:not(:last-child) {
     margin-bottom: 25px;
+
+    @include m.tablet {
+      margin-bottom: 0;
+    }
   }
 
   &::before {
@@ -111,24 +151,46 @@
     left: 0;
     transform: translateY(-25%);
     background-repeat: no-repeat;
+
+    @include m.tablet {
+      left: 50%;
+      top: 60px;
+      transform: translateX(-50%);
+      background-size: cover;
+    }
   }
 
   &--housing::before {
     background-image: url("../img/icons/icon-house.svg");
     width: 39px;
     height: 37px;
+
+    @include m.tablet {
+      width: 77px;
+      height: 73px;
+    }
   }
 
   &--eat::before {
     background-image: url("../img/icons/icon-burger.svg");
     width: 40px;
     height: 35px;
+
+    @include m.tablet {
+      width: 80px;
+      height: 72px;
+    }
   }
 
   &--souvenirs::before {
     background-image: url("../img/icons/icon-gift.svg");
     width: 32px;
     height: 38px;
+
+    @include m.tablet {
+      width: 67px;
+      height: 79px;
+    }
   }
 }
 
