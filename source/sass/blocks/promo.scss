@@ -11,11 +11,14 @@
     left: 0;
     right: 0;
     height: 57px;
-    width: auto;
     content: "";
     bottom: 0;
     z-index: 6;
     display: inline-block;
+
+    @include m.tablet {
+      background-image: url("../img/promo-bottom-tablet.svg");
+    }
   }
 }
 

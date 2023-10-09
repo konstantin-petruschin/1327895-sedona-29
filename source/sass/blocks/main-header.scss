@@ -17,6 +17,7 @@
   border: none;
   width: 23px;
   height: 22px;
+  background-image: url("../img/icons/menu.svg");
 
   @include m.tablet {
     display: none;

@@ -5,15 +5,29 @@
   padding-top: 32px;
 }
 
+.advantages__wrapper {
+  @include m.tablet {
+    padding: 47px 70px 50px;
+  }
+}
+
 .advantages__title {
   margin-bottom: 35px;
   max-width: 270px;
+
+  @include m.tablet {
+    max-width: 520px;
+  }
 }
 
 .advantages__text {
   margin: 0;
   padding: 0;
   margin-bottom: 16px;
+
+  @include m.tablet {
+    margin: 0 auto;
+  }
 }
 
 .advantages__name {
@@ -47,7 +61,6 @@
   position: relative;
   padding-right: 20px;
   padding-left: 20px;
-  display: grid;
 
 
   &--back {
@@ -76,12 +89,21 @@
 
 .advantages__item-container {
   @include m.tablet {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
   }
 }
 
 .advantages__item-wrapper {
   padding: 24px 12px;
+
+  @include m.tablet {
+    padding: 60px 33px;
+  }
+
+  @include m.desktop {
+    padding: 52px 50px;
+  }
 
   &--no-back {
     border-bottom: 1px solid v.$color-border;
@@ -95,11 +117,21 @@
     position: relative;
     padding-top: 54px;
     padding-bottom: 40px;
+
+    @include m.tablet {
+      padding-top: 54px;
+      padding-bottom: 40px;
+    }
   }
 
   &--bridge {
     padding-top: 37px;
     padding-bottom: 37px;
+
+    @include m.tablet {
+      padding-top: 54px;
+      padding-bottom: 40px;
+    }
   }
 }
 
@@ -113,14 +145,14 @@
 
 .advantages__services {
   margin: 0;
-  padding-top: 25px;
-  padding-bottom: 25px;
+  padding: 25px 20px;
   text-align: left;
   list-style: none;
   background-color: v.$color-secondary;
   color: v.$color-text;
 
   @include m.tablet {
+    padding: 0;
     text-align: center;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
