@@ -10,6 +10,11 @@
   display: none;
   text-align: center;
 
+  &--opened {
+    display: block;
+  }
+
+
   @include m.tablet {
     position: static;
     display: block;
