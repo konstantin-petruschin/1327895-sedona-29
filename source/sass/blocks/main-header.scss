@@ -20,6 +20,7 @@
   background-image: url("../img/icons/menu-icon.svg");
   background-color: transparent;
   background-repeat: no-repeat;
+  z-index: 4;
 
   &--closed {
     background-image: url("../img/icons/menu-close.svg");

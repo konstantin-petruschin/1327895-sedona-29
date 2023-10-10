@@ -1,0 +1,11 @@
+@use "../mixins/media.scss" as m;
+@use "../comman/variables.scss" as v;
+
+.form__group {
+  border: none;
+  border-top: 1px solid v.$color-border;
+}
+
+.form__title {
+  text-align: center;
+}

@@ -3,12 +3,12 @@
 
 .main-nav {
   position: absolute;
-  z-index: 10;
   top: 0;
   left: 0;
   width: 100%;
   display: none;
   text-align: center;
+  z-index: 4;
 
   &--opened {
     display: block;
