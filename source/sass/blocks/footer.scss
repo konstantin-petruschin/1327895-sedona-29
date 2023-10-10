@@ -1,0 +1,78 @@
+@use "../comman/variables.scss" as v;
+@use "../mixins/media.scss" as m;
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 30px;
+  padding-top: 33px;
+  padding-bottom: 33px;
+
+  @include m.tablet {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.footer__hashtag {
+  font-size: 21px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 26px;
+  text-transform: uppercase;
+  color: v.$color-title;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    outline: none;
+    color: v.$color-primary;
+  }
+
+  &:active {
+    background-color: v.$color-primary-active;
+  }
+}
+
+
+.footer__socials {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.footer__social-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+}
+
+.footer__social-link:active .footer__icon {
+  opacity: 0.3;
+}
+
+.footer__developer {
+  text-decoration: none;
+  color: v.$color-title;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 12px;
+
+
+  &:hover,
+  &:focus {
+    outline: none;
+    color: v.$color-primary;
+  }
+
+  &:active {
+    color: #b3b3b3;
+  }
+}

@@ -1,5 +1,5 @@
 @use "../mixins/media.scss" as m;
-@use "variables.scss" as v;
+@use "../comman/variables.scss" as v;
 
 img {
   max-width: 100%;
@@ -37,11 +37,12 @@ img {
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
-  line-height: 18px;
+  line-height: 21px;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
   text-transform: uppercase;
+  min-width: 320px;
 
   @include m.tablet {
     font-size: 16px;
@@ -54,20 +55,22 @@ main {
 }
 
 .container {
-  max-width: v.$phone;
+  min-width: v.$phone;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
   padding-left: 20px;
   padding-right: 20px;
 
+
   @include m.tablet {
-    max-width: v.$tablet;
+    min-width: v.$tablet;
     padding-left: 30px;
     padding-right: 30px;
   }
 
   @include m.desktop {
-    max-width: v.$desktop;
+    min-width: v.$desktop;
     padding-left: 110px;
     padding-right: 110px;
   }

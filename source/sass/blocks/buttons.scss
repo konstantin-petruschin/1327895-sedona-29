@@ -1,0 +1,26 @@
+@use "../comman/variables.scss" as v;
+
+.button {
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 21px;
+
+  &--primary {
+    background-color: v.$color-primary;
+    color: v.$color-secondary;
+
+    &:hover,
+    &:focus {
+      outline: none;
+      background-color: v.$color-primary-hover;
+    }
+
+    &:active {
+      background-color: v.$color-primary-active;
+      color: rgba(v.$color-secondary, $alpha: 0.3);
+    }
+  }
+}

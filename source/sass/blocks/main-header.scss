@@ -1,13 +1,40 @@
+@use "../mixins/media.scss" as m;
+
 .main-header {
   position: relative;
   text-align: center;
 }
 
+.main-header__wrapper {
+  min-height: 56px;
+}
+
 .main-header__toggle {
   position: absolute;
+  display: inline-block;
   top: 17px;
   right: 20px;
   border: none;
   width: 23px;
   height: 22px;
+  background-image: url("../img/icons/menu-icon.svg");
+  background-color: transparent;
+  background-repeat: no-repeat;
+  z-index: 4;
+
+  &--closed {
+    background-image: url("../img/icons/menu-close.svg");
+  }
+
+  @include m.tablet {
+    display: none;
+  }
+}
+
+.main-header__logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 3;
 }

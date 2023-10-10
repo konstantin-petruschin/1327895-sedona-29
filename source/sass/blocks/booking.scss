@@ -1,0 +1,28 @@
+@use "../mixins/media.scss" as m;
+
+.booking {
+  padding: 38px 20px 49px;
+}
+
+.booking__title {
+  margin-bottom: 20px;
+}
+
+.booking__text {
+  margin: 0;
+  margin-bottom: 32px;
+  padding-left: 9px;
+  padding-right: 9px;
+}
+
+.booking__link {
+  width: 100%;
+  padding: 10px;
+  font-size: 21px;
+
+
+  @include m.tablet {
+    width: 458px;
+    margin: 0 auto;
+  }
+}
