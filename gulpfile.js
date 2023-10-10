@@ -134,9 +134,9 @@ export const reload = (done) => {
 export const watcher = () => {
   gulp.watch('source/sass/**/*.scss', gulp.series(styles));
   gulp.watch('source/js/script.js', gulp.series(scripts));
-  gulp.watch('source/*.html').on('change', browser.reload);
-  // gulp.watch('source/img/**/*.{jpg,png,svg}', gulp.series(copyImages, createWebp, styles, html, reload));
-  // gulp.watch('source/img/sprite/*.svg', gulp.series(sprite, styles, html, reload));
+  gulp.watch('source/*.html').on('change', gulp.series(html, reload));
+  gulp.watch('source/img/**/*.{jpg,png,svg}', gulp.series(copyImages, createWebp, styles, html, reload));
+  gulp.watch('source/img/sprite/*.svg', gulp.series(sprite, styles, html, reload));
 }
 
 // Build

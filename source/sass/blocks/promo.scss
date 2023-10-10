@@ -2,10 +2,12 @@
 
 .promo {
   position: relative;
+  min-height: 389px;
 
   &::after {
     position: absolute;
-    background-image: url("../img/promo-bottom-mobile.svg");
+    background-image: url("../img/promo-bottom-tablet.svg");
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     left: 0;
@@ -15,10 +17,6 @@
     bottom: 0;
     z-index: 6;
     display: inline-block;
-
-    @include m.tablet {
-      background-image: url("../img/promo-bottom-tablet.svg");
-    }
   }
 }
 
