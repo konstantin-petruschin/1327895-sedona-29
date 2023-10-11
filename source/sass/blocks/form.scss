@@ -6,6 +6,9 @@
   border-top: 1px solid v.$color-border;
   padding-top: 24px;
   padding-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
 
   &--name {
     padding-bottom: 39px;
@@ -24,6 +27,9 @@
 .form__item {
   display: flex;
   flex-direction: column;
-  margin-bottom: 16px;
+}
+
+.form__group-comment {
+  width: 100%;
 }
 
