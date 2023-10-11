@@ -34,7 +34,9 @@
 .main-header__logo {
   position: absolute;
   top: 0;
-  left: 0;
   right: 0;
+  left: calc(50% - 91px);
+  display: block;
+  width: 182px;
   z-index: 3;
 }

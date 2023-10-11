@@ -1,0 +1,24 @@
+@use "../mixins/media.scss" as m;
+@use "../comman/variables.scss" as v;
+
+.input-text {
+  padding: 16px;
+  font-weight: 700;
+  border: 4px solid v.$color-background;
+  background-color: v.$color-background;
+  display: inline-block;
+
+  &::placeholder {
+    color: rgba(v.$color-title, $alpha: 0.3);
+  }
+
+  &:hover,
+  &:focus {
+    background-color: v.$color-secondary;
+    outline: none;
+  }
+}
+
+.form__label {
+  margin-left: 16px;
+}

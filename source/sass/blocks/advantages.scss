@@ -51,7 +51,7 @@
 
   @include m.tablet {
     display: grid;
-    grid-template-rows: repeat(5, auto);
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
@@ -60,7 +60,7 @@
   position: relative;
   padding-right: 20px;
   padding-left: 20px;
-
+  grid-column: 1 / 4;
 
   &--back {
     background-color: v.$color-primary;
@@ -82,17 +82,33 @@
     height: 37px;
     z-index: 5;
 
-
     @include m.tablet {
       display: none;
     }
+  }
+
+  &--area {
+    grid-column: 1 / 2;
+  }
+
+  &--road {
+    grid-column: 2 / 3;
+  }
+
+  &--tourists {
+    grid-column: 3 / 4;
   }
 }
 
 .advantages__item-container {
   @include m.tablet {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
+    display: flex;
+  }
+
+  &--reverse {
+    @include m.tablet {
+      flex-direction: row-reverse;
+    }
   }
 }
 
