@@ -60,7 +60,8 @@
       </picture>
       <picture>
         <source media="(min-width: 1200px)" srcset="./img/slogan-tablet.svg" width="457" height="78">
-        <img class="promo__slogan" src="./img/slogan-mobile.svg" alt="Добро пожаловать в Седону" width="229" height="39">
+        <img class="promo__slogan" src="./img/slogan-mobile.svg" alt="Добро пожаловать в Седону" width="229"
+          height="39">
       </picture>
     </section>
     <section class="main-form__introduction form-header">
@@ -99,57 +100,65 @@
               placeholder="Введите e-mail">
           </div>
         </fieldset>
-        <fieldset class="form__group">
-          <h3 class="form__title title">Ваше общее впечатление:</h3>
-          <label class="form__pick pick">
-            <input class="pick__input visually-hidden" type="radio" name="impression" value="positive" checked>
-            <span class="pick__mark pick__mark--radio"></span>
-            <span class="pick__name">Скорее положительное</span>
-          </label>
-          <label class="form__pick pick">
-            <input class="pick__input visually-hidden" type="radio" name="impression" value="negative" checked>
-            <span class="pick__mark pick__mark--radio"></span>
-            <span class="pick__name">Скорее отрицательное</span>
-          </label>
-          <label class="form__pick pick">
-            <input class="pick__input visually-hidden" type="radio" name="impression" value="unsure" checked>
-            <span class="pick__mark pick__mark--radio"></span>
-            <span class="pick__name">Затрудняюсь ответить</span>
-          </label>
+        <fieldset class="form__group form__group--impression">
+          <h3 class="form__title form__title--line title">
+            <span class="form__title-text">Ваше общее впечатление:</span>
+          </h3>
+          <div class="form__group-list form__group-list--impression">
+            <label class="form__pick pick">
+              <input class="pick__input visually-hidden" type="radio" name="impression" value="positive" checked>
+              <span class="pick__mark pick__mark--radio"></span>
+              <span class="pick__name">Скорее положительное</span>
+            </label>
+            <label class="form__pick pick">
+              <input class="pick__input visually-hidden" type="radio" name="impression" value="negative" checked>
+              <span class="pick__mark pick__mark--radio"></span>
+              <span class="pick__name">Скорее отрицательное</span>
+            </label>
+            <label class="form__pick pick">
+              <input class="pick__input visually-hidden" type="radio" name="impression" value="unsure" checked>
+              <span class="pick__mark pick__mark--radio"></span>
+              <span class="pick__name">Затрудняюсь ответить</span>
+            </label>
+          </div>
+        </fieldset>
+        <fieldset class="form__group form__group--attractions">
+          <h3 class="form__title form__title--line title">
+            <span class="form__title-text">Посещенные достопримечательности:</span>
+          </h3>
+          <div class="form__group-list form__group-list--attractions">
+            <label class="form__pick pick">
+              <input class="pick__input visually-hidden" type="checkbox" name="attractions" value="positive" checked>
+              <span class="pick__mark pick__mark--checkbox"></span>
+              <span class="pick__name">Мост Дьявола</span>
+            </label>
+            <label class="form__pick pick">
+              <input class="pick__input visually-hidden" type="checkbox" name="attractions" value="negative" checked>
+              <span class="pick__mark pick__mark--checkbox"></span>
+              <span class="pick__name">Гора-Колокол</span>
+            </label>
+            <label class="form__pick pick">
+              <input class="pick__input visually-hidden" type="checkbox" name="attractions" value="unsure" checked>
+              <span class="pick__mark pick__mark--checkbox"></span>
+              <span class="pick__name">Слайд-парк</span>
+            </label>
+            <label class="form__pick pick">
+              <input class="pick__input visually-hidden" type="checkbox" name="attractions" value="unsure">
+              <span class="pick__mark pick__mark--checkbox"></span>
+              <span class="pick__name">Красные скалы</span>
+            </label>
+          </div>
 
         </fieldset>
-        <fieldset class="form__group">
-          <h3 class="form__title title">Посещенные достопримечательности:</h3>
-          <label class="form__pick pick">
-            <input class="pick__input visually-hidden" type="checkbox" name="attractions" value="positive" checked>
-            <span class="pick__mark pick__mark--checkbox"></span>
-            <span class="pick__name">Мост Дьявола</span>
-          </label>
-          <label class="form__pick pick">
-            <input class="pick__input visually-hidden" type="checkbox" name="attractions" value="negative" checked>
-            <span class="pick__mark pick__mark--checkbox"></span>
-            <span class="pick__name">Гора-Колокол</span>
-          </label>
-          <label class="form__pick pick">
-            <input class="pick__input visually-hidden" type="checkbox" name="attractions" value="unsure" checked>
-            <span class="pick__mark pick__mark--checkbox"></span>
-            <span class="pick__name">Слайд-парк</span>
-          </label>
-          <label class="form__pick pick">
-            <input class="pick__input visually-hidden" type="checkbox" name="attractions" value="unsure">
-            <span class="pick__mark pick__mark--checkbox"></span>
-            <span class="pick__name">Красные скалы</span>
-          </label>
-        </fieldset>
-        <fieldset class="form__group">
-          <h3 class="form__title title">Опишите свои эмоции:</h3>
-          <textarea class="form__group-comment input-text" name="impression" cols="30" rows="8"
+        <fieldset class="form__group form__group--description">
+          <h3 class="form__title form__title--line title">
+            <span class="form__title-text">Опишите свои эмоции:</span>
+          </h3>
+          <textarea class="form__group-comment input-text" name="description-impression" cols="30" rows="8"
             placeholder="Опишите подробно все свои восторги"></textarea>
         </fieldset>
-        <div class="form__footer">
-          <button class="form__button" type="submit">Отправить отзыв</button>
-          <span class="form__info">*&mdash;обязательные поля</span>
-        </div>
+        <button class="form__button button button--primary" type="submit">Отправить отзыв</button>
+        <span class="form__info">*&mdash;обязательные поля</span>
       </form>
     </section>
   </main>

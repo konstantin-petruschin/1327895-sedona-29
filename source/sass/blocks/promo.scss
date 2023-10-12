@@ -2,7 +2,11 @@
 
 .promo {
   position: relative;
-  min-height: 389px;
+  min-height: 158px;
+
+  &--index {
+    min-height: 389px;
+  }
 
   &::after {
     position: absolute;
