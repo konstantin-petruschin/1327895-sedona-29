@@ -26,7 +26,7 @@
             <a class="main-nav__link" href="catalog.html">Фото и видео</a>
           </li>
           <li class="main-nav__item">
-            <a class="main-nav__link">Форма Отзыва</a>
+            <a class="main-nav__link main-nav__link--current">Форма Отзыва</a>
           </li>
           <li class="main-nav__item">
             <a href="" class="main-nav__link">HTML ACADEMY</a>
@@ -154,26 +154,39 @@
     </section>
   </main>
 
-  <footer class="footer">
-    <a class="footer__hashtag" href="#">#visitSEDONA</a>
+  <footer class="footer container">
+    <a class="footer__hashtag" href="#">#visitSedona</a>
     <ul class="footer__socials">
       <li class="footer__social-item">
-        <span class="visually-hidden">Мы в контакте.</span>
-        <a class="footer__social-link" href="https://vk.com/htmlacademy"></a>
-      </li>
-      <li class="footer__social-item">
-        <a class="footer__social-link" href="https://t.me/htmlacademy">
-          <span class="visually-hidden">Мы в телеграмме.</span>
+        <a class="footer__social-link button button--primary" href="https://vk.com/htmlacademy">
+          <span class="visually-hidden">Мы в контакте.</span>
+          <svg class="footer__icon" width="24" height="14" role="img">
+            <use xlink:href="img/sprites/sprite.svg#vk"></use>
+          </svg>
         </a>
       </li>
       <li class="footer__social-item">
-        <a class="footer__social-link" href="https://www.youtube.com/user/htmlacademyru">
+        <a class="footer__social-link button button--primary" href="https://t.me/htmlacademy">
+          <span class="visually-hidden">Мы в телеграмме.</span>
+          <svg class="footer__icon" width="22" height="18" role="img">
+            <use xlink:href="img/sprites/sprite.svg#telegram"></use>
+          </svg>
+        </a>
+      </li>
+      <li class="footer__social-item">
+        <a class="footer__social-link  button button--primary" href="https://www.youtube.com/user/htmlacademyru">
           <span class="visually-hidden">Мы на Youtube.</span>
+          <svg class="footer__icon" width="20" height="14" role="img">
+            <use xlink:href="img/sprites/sprite.svg#youtube"></use>
+          </svg>
         </a>
       </li>
     </ul>
     <a class="footer__developer" href="https://htmlacademy.ru/">
       <span class="footer__developer-text">Разработано</span>
+      <svg class="footer__icon" width="29" height="35" role="img">
+        <use xlink:href="img/sprites/sprite.svg#developer-logo"></use>
+      </svg>
     </a>
   </footer>
 </body>

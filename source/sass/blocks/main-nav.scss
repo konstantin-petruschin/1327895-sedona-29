@@ -58,8 +58,27 @@
   font-weight: 700;
   color: v.$color-secondary;
 
+  &:hover,
+  &:focus {
+    outline: none;
+    color: v.$color-primary-hover;
+  }
+
+  &:active {
+    color: rgba(v.$color-title, $alpha: 0.3);
+  }
+
   @include m.tablet {
     color: v.$color-title;
     box-shadow: none;
+  }
+
+  &--current,
+  &--current:hover,
+  &--current:focus,
+  &--current:active {
+    @include m.tablet {
+      color: #766357;
+    }
   }
 }

@@ -37,7 +37,7 @@
   display: block;
   width: 16px;
   height: 16px;
-  background-color: v.$color-title;
+  background-color: v.$color-text;
   border-radius: 50%;
 }
 
@@ -48,4 +48,18 @@
   width: 22px;
   height: 16px;
   background: url("../img/icons/check.svg") no-repeat;
+}
+
+.pick:hover .pick__mark,
+.pick:focus .pick__mark {
+  background-color: v.$color-input-hover;
+}
+
+.pick:active .pick__mark {
+  background-color: #d5d5d5;
+}
+
+
+.pick:active .pick__mark::before {
+  opacity: 0.3;
 }
