@@ -4,10 +4,6 @@
   position: relative;
   min-height: 158px;
 
-  &--index {
-    min-height: 389px;
-  }
-
   &::after {
     position: absolute;
     background-image: url("../img/promo-bottom-tablet.svg");
@@ -41,4 +37,6 @@
 .promo__background {
   display: block;
   width: 100%;
+  background-position: bottom;
+  height: 158px;
 }

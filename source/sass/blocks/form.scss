@@ -28,6 +28,8 @@
     @include m.tablet {
       padding-right: 29px;
       border-right: 1px solid #dbdbdb;
+      padding-bottom: 0;
+      padding-top: 10px;
     }
   }
 
@@ -37,11 +39,17 @@
 
     @include m.tablet {
       padding-left: 28px;
+      padding-bottom: 0;
+      padding-top: 10px;
     }
   }
 
   &--impression {
     grid-column: 1 / -1;
+
+    @include m.tablet {
+      padding-top: 63px;
+    }
   }
 
   &--attractions {
@@ -58,13 +66,13 @@
   text-align: center;
   margin-bottom: 20px;
   position: relative;
-  z-index: 2;
 }
 
 .form__title--line {
-  &::before,
-  &::after {
-    @include m.tablet {
+  width: 100%;
+
+  @include m.tablet {
+    &::after {
       content: "";
       display: block;
       width: 100%;
@@ -72,23 +80,10 @@
       background-color: #dbdbdb;
       position: absolute;
       top: 50%;
-      z-index: 1;
-    }
-  }
-
-  &::before {
-    @include m.tablet {
-      right: 100%;
-    }
-  }
-
-  &::after {
-    @include m.tablet {
-      left: 100%;
+      z-index: -1;
     }
   }
 }
-
 
 .form__title-text {
   background-color: v.$color-secondary;
