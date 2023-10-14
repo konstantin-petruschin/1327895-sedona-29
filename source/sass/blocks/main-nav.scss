@@ -1,6 +1,12 @@
 @use "../mixins/media.scss" as m;
 @use "../comman/variables.scss" as v;
 
+.no-js {
+  .main-nav {
+    display: block;
+  }
+}
+
 .main-nav {
   position: absolute;
   top: 0;
@@ -8,7 +14,7 @@
   width: 100%;
   display: none;
   text-align: center;
-  z-index: 4;
+  z-index: 7;
 
   &--opened {
     display: block;

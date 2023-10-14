@@ -25,7 +25,7 @@ const marks = [
 function init() {
   const myMap = new ymaps.Map("map", {
     center: [34.869497, -111.760186],
-    zoom: 3
+    zoom: 8
   });
 
   marks.forEach(function(mark, i) {
@@ -33,7 +33,7 @@ function init() {
       hintContent: mark.hintContent
     }, {
       iconLayout: 'default#Image',
-      iconImageHref: '../img/icons/pin.svg',
+      iconImageHref: '../img/icons/pin.png',
       iconImageSize: [27, 27]
     }))
   });

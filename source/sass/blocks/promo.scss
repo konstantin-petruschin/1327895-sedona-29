@@ -39,4 +39,17 @@
   width: 100%;
   background-position: bottom;
   height: 158px;
+
+  @include m.tablet {
+
+    height: 333px;
+  }
+
+  &--index {
+    height: 389px;
+
+    @include m.tablet {
+      height: 518px;
+    }
+  }
 }
