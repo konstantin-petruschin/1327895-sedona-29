@@ -5,6 +5,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="css/style.min.css">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="images/favicons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicons/apple.png">
+  <link rel="manifest" href="manifest.webmanifest">
+
   <title>HTML Academy: Седона</title>
   <script src="https://api-maps.yandex.ru/2.1/?apikey=05c44d75-7165-414e-b9aa-78dacc85a092&lang=ru_RU"
     type="text/javascript" loading="lazy" defer as="script">
@@ -13,8 +18,9 @@
 </head>
 
 <body class="page__body no-js">
-  <header class="page__main-header main-header">
-    <div class="main-header__wrapper container">
+  <div class="page__container">
+    <header class="page__main-header main-header">
+    <div class="main-header__wrapper">
       <a class="main-header__logo">
         <img class="main-header__logo-img" src="img/logo.svg" alt="Логотип Sedona." width="185" height="96">
       </a>
@@ -39,9 +45,9 @@
       </nav>
     </div>
   </header>
-  <main class="page__main main-index">
+  <main class="page__main page-main">
     <h1 class="visually-hidden">О Седоне.</h1>
-    <section class="main-index__promo promo">
+    <section class="page-main__promo promo">
       <h2 class="visually-hidden">Добро пожаловать в Седону.</h2>
       <picture>
         <source type="image/webp" media="(min-width: 1200px)"
@@ -68,7 +74,7 @@
           alt="Добро пожаловать в Седону, потому что Гранд Каньон - отстой.">
       </picture>
     </section>
-    <section class="main-index__advantages advantages">
+    <section class="page-main__advantages advantages">
       <div class="advantages__wrapper">
         <h2 class="advantages__title title">СЕДОНА — небольшой городок в Аризоне, заслуживающий большего!</h2>
         <p class="advantages__text">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
@@ -158,13 +164,13 @@
         </li>
       </ol>
     </section>
-    <section class="main-index__booking booking">
+    <section class="page-main__booking booking">
       <h2 class="booking__title title title--big">Заинтересовались?</h2>
       <p class="booking__text">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения
         гостиниц в Седоне</p>
       <a class="booking__link  button button--primary" href="catalog.html">Найти гостиницу</a>
     </section>
-    <section class="main-index__map map">
+    <section class="page-main__map map">
       <h2 class="visually-hidden">Седона на карте.</h2>
         <picture>
           <source type="image/webp" media="(min-width: 1200px)"
@@ -182,7 +188,7 @@
       <div class="map__yandex" id="map"></div>
     </section>
   </main>
-  <footer class="footer container">
+  <footer class="footer">
     <a class="footer__hashtag" href="#">#visitSedona</a>
     <ul class="footer__socials">
       <li class="footer__social-item">
@@ -217,6 +223,8 @@
       </svg>
     </a>
   </footer>
+  </div>
+
 </body>
 
 </html>

@@ -22,4 +22,12 @@
   @include m.tablet {
     font-size: 21px;
   }
+
+  &--min {
+    font-size: 14px;
+
+    @include m.desktop {
+      color: v.$color-secondary;
+    }
+  }
 }

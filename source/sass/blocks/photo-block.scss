@@ -1,0 +1,118 @@
+@use "../mixins/media.scss" as m;
+@use "../comman/variables.scss" as v;
+
+.photo-block {
+  @include m.tablet {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include m.desktop {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.photo-block__item {
+  padding: 25px 20px;
+  position: relative;
+  border-top: 1px solid v.$color-input-hover;
+
+  &:last-child {
+    border-bottom: 1px solid v.$color-input-hover;
+  }
+
+  @include m.tablet {
+    border: none;
+  }
+
+  &--big {
+    @include m.tablet {
+      grid-column: 1 / -1;
+    }
+  }
+}
+
+.photo-block__img {
+  display: block;
+  margin-bottom: 15px;
+  width: 100%;
+
+  @include m.tablet {
+    margin-bottom: 0;
+  }
+}
+
+.photo-block__info {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+  font-size: 14px;
+  line-height: 21px;
+
+  @include m.tablet {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 20px 15px;
+    background-color: v.$color-background;
+
+    &--back {
+      background-color: #eaeaea;
+    }
+  }
+
+  @include m.desktop {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    color: v.$color-secondary;
+    background-color: rgba(v.$color-title, $alpha: 0.3);
+    padding: 17px 25px 17px;
+
+    &--big {
+      padding: 22px 21px 15px;
+    }
+  }
+}
+
+.photo-block__autor {
+  margin: 0;
+  padding: 0;
+  text-transform: none;
+}
+
+.photo-block__likes {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.photo-block__likes-button {
+  display: inline-block;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.photo-block__icon {
+  color: rgba(v.$color-title, $alpha: 0.3);
+
+  @include m.desktop {
+    color: v.$color-secondary;
+  }
+}
+
+.photo-block__likes-button:hover .photo-block__icon,
+.photo-block__likes-button:focus .photo-block__icon {
+  color: v.$color-primary-hover;
+}
+
+.photo-block__likes-button:active .photo-block__icon {
+  color: v.$color-primary-active;
+}
+
+.photo-block__likes-count {
+  font-weight: 700;
+}

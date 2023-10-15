@@ -48,10 +48,6 @@ img {
     font-size: 16px;
     line-height: 24px;
   }
-
-  @include m.desktop {
-    box-shadow: 0 5px 15px 0 rgba(0, 1, 1, 0.2);
-  }
 }
 
 main {
@@ -63,36 +59,14 @@ main {
   }
 }
 
-.container {
+.page__container {
   min-width: v.$phone;
+  max-width: v.$desktop;
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 20px;
-  padding-right: 20px;
-
-
-  @include m.tablet {
-    min-width: v.$tablet;
-    padding-left: 30px;
-    padding-right: 30px;
-  }
 
   @include m.desktop {
-    min-width: v.$desktop;
-    padding-left: 110px;
-    padding-right: 110px;
-  }
-
-  &--form {
-    @include m.tablet {
-      padding-left: 70px;
-      padding-right: 70px;
-    }
-
-    @include m.desktop {
-      padding-left: 110px;
-      padding-right: 110px;
-    }
+    box-shadow: 0 5px 15px 0 rgba(0, 1, 1, 0.2);
   }
 }

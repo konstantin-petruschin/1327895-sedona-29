@@ -110,6 +110,8 @@
   @include m.desktop {
     display: flex;
     flex-wrap: wrap;
+    flex-direction: row;
+    gap: 64px;
   }
 
   &--impression {
@@ -130,6 +132,7 @@
 .form__item {
   display: flex;
   flex-direction: column;
+  text-align: left;
 }
 
 .form__group-comment {
@@ -140,6 +143,7 @@
 .form__button {
   grid-column: 1 / 2;
   padding: 16px;
+  width: 100%;
 }
 
 .form__info {

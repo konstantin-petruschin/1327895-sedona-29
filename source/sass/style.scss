@@ -1,7 +1,7 @@
 // Начните писать стили здесь
 @use "comman/fonts.scss";
 @use "comman/global.scss";
-@use "blocks/main-index.scss";
+@use "blocks/page-main.scss";
 @use "blocks/title.scss";
 @use "blocks/buttons.scss";
 @use "blocks/main-header.scss";
@@ -15,3 +15,4 @@
 @use "blocks/form.scss";
 @use "blocks/input-text.scss";
 @use "blocks/pick.scss";
+@use "blocks/photo-block.scss";
