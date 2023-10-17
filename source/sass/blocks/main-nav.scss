@@ -35,7 +35,7 @@
 
   @include m.tablet {
     display: grid;
-    grid-template-columns: repeat(2, 1fr) 185px repeat(2, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     width: 100%;
     background-color: v.$color-secondary;
   }

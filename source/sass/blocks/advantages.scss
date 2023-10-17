@@ -3,11 +3,18 @@
 
 .advantages {
   padding-top: 32px;
+
+  @include m.tablet {
+    padding-top: 0;
+  }
 }
 
 .advantages__wrapper {
+  padding-left: 20px;
+  padding-right: 20px;
+
   @include m.tablet {
-    padding: 47px 70px 50px;
+    padding: 48px 70px 53px;
   }
 }
 
@@ -16,6 +23,7 @@
   max-width: 270px;
 
   @include m.tablet {
+    margin-bottom: 27px;
     max-width: 520px;
   }
 }
@@ -32,11 +40,19 @@
 
 .advantages__name {
   margin-bottom: 11px;
+
+  @include m.tablet {
+    max-width: 155px;
+  }
 }
 
 .advantages__number {
   margin-bottom: 17px;
   display: inline-block;
+
+  @include m.tablet {
+    margin-bottom: 22px;
+  }
 }
 
 .advantages__description {
@@ -61,6 +77,10 @@
   padding-right: 20px;
   padding-left: 20px;
   grid-column: 1 / 4;
+
+  @include m.tablet {
+    line-height: 22px;
+  }
 
   &--back {
     background-color: v.$color-primary;
@@ -113,14 +133,10 @@
 }
 
 .advantages__item-wrapper {
-  padding: 24px 12px;
+  padding: 24px 17px;
 
   @include m.tablet {
-    padding: 60px 33px;
-  }
-
-  @include m.desktop {
-    padding: 52px 50px;
+    padding: 40px 12px;
   }
 
   &--no-back {
@@ -132,24 +148,31 @@
   }
 
   &--city {
-    position: relative;
-    padding-top: 54px;
-    padding-bottom: 40px;
-
-    @include m.tablet {
-      padding-top: 52px;
-      padding-bottom: 31px;
-    }
+    padding-top: 70px;
+    padding-bottom: 38px;
   }
 
   &--bridge {
     padding-top: 37px;
     padding-bottom: 37px;
+  }
 
+  &--city,
+  &--bridge {
     @include m.tablet {
-      padding-top: 52px;
-      padding-bottom: 31px;
+      padding: 52px 30px 25px;
+      max-width: calc(100% / 3);
     }
+  }
+
+  &--road {
+    @include m.tablet {
+      padding: 40px 20px;
+    }
+  }
+
+  @include m.desktop {
+    padding: 52px 50px;
   }
 }
 
@@ -163,7 +186,7 @@
 
 .advantages__services {
   margin: 0;
-  padding: 25px 20px;
+  padding: 32px 20px 44px;
   text-align: left;
   list-style: none;
   background-color: v.$color-secondary;
@@ -182,11 +205,11 @@
   padding-left: 45px;
 
   @include m.tablet {
-    padding: 156px 33px 60px;
+    padding: 156px 39px 60px;
   }
 
   &:not(:last-child) {
-    margin-bottom: 25px;
+    margin-bottom: 32px;
 
     @include m.tablet {
       margin-bottom: 0;
@@ -246,6 +269,10 @@
 
 .advantages__subtitle {
   margin-bottom: 16px;
+
+  @include m.tablet {
+    margin-bottom: 22px;
+  }
 }
 
 .advantages__services-text {

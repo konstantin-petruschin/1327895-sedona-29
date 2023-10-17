@@ -30,7 +30,11 @@
   right: 0;
 
   &--index {
-    top: 70px;
+    top: 90px;
+
+    @include m.tablet {
+      top: 77px;
+    }
   }
 }
 

@@ -6,7 +6,7 @@
   flex-direction: column;
   align-items: center;
   row-gap: 30px;
-  padding: 33px 20px;
+  padding: 40px 20px 33px;
 
   @include m.tablet {
     flex-direction: row;
