@@ -182,6 +182,12 @@
 
 .advantages__image {
   display: block;
+  width: 100%;
+  height: 260px;
+
+  @include m.tablet {
+    height: 256px;
+  }
 }
 
 .advantages__services {

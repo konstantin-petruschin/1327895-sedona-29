@@ -11,8 +11,7 @@
 .form__group {
   border: none;
   border-top: 1px solid v.$color-border;
-  padding-top: 24px;
-  padding-bottom: 24px;
+  padding: 24px 20px;
   display: flex;
   flex-direction: column;
   row-gap: 16px;
@@ -59,6 +58,16 @@
   &--description {
     grid-column: 1 / -1;
     width: 100%;
+  }
+
+  &--submit {
+    grid-column: 1 / -1;
+
+    @include m.tablet {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      align-items: center;
+    }
   }
 }
 
