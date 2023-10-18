@@ -3,7 +3,7 @@
 
 .input-text {
   font-family: "PT-Sans", sans-serif;
-  padding: 16px;
+  padding: 13px 11px;
   font-size: 18px;
   font-weight: 700;
   border: 4px solid transparent;
@@ -24,8 +24,4 @@
     border-color: v.$color-input-hover;
     background-color: v.$color-secondary;
   }
-}
-
-.form__label {
-  margin-left: 16px;
 }

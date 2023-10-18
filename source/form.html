@@ -66,7 +66,7 @@
         </picture>
       </section>
       <section class="page-main__heading heading">
-        <h2 class="heading__title title">Оставьте свой отзыв</h2>
+        <h2 class="heading__title title title--big">Оставьте свой отзыв</h2>
         <p class="heading__text">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами
           достопримечательностях</p>
       </section>
@@ -74,32 +74,32 @@
         <h2 class="visually-hidden">Форма обратной связи.</h2>
         <form class="page-main__filling form" action="https://echo.htmlacademy.ru/" method="post">
           <fieldset class="form__group form__group--name">
-            <h3 class="form__title title">Представьтесь</h3>
-            <div class="form__item">
-              <label class="form__label" for="name-user">Имя*:</label>
-              <input class="form__input-text input-text" id="name-user" type="text" value="Пётр">
-            </div>
-            <div class="form__item">
-              <label class="form__label" for="surname-user">Фамилия*:</label>
-              <input class="form__input-text input-text" id="surname-user" type="text" value="Пустота">
-            </div>
-            <div class="form__item">
-              <label class="form__label" for="patronymic-user">Отчество:</label>
-              <input class="form__input-text input-text" id="patronymic-user" type="text" value="Викторович">
-            </div>
+            <h3 class="form__title title">Представьтесь:</h3>
+            <label class="form__label">
+              <span class="form__name">Имя*:</span>
+              <input class="form__input-text input-text" type="text" value="Пётр">
+            </label>
+            <label class="form__label">
+              <span class="form__name">Фамилия*:</span>
+              <input class="form__input-text input-text" type="text" value="Пустота">
+            </label>
+            <label class="form__label">
+              <span class="form__name">Отчество:</span>
+              <input class="form__input-text input-text" type="text" value="Викторович">
+            </label>
           </fieldset>
           <fieldset class="form__group form__group--contacts">
             <h3 class="form__title title">Контактная информация:</h3>
-            <div class="form__item">
-              <label class="form__label" for="user-phone">Контактный телефон*:</label>
-              <input class="form__input-text form__input-text--tel input-text" id="user-phone" type="tel"
+            <label class="form__label">
+              <span class="form__name">Контактный телефон*:</span>
+              <input class="form__input-text form__input-text--tel input-text" type="tel"
                 placeholder="Введите телефон">
-            </div>
-            <div class="form__item">
-              <label class="form__label" for="user-mail">Электронная почта*:</label>
-              <input class="form__input-text form__input-text--mail input-text" id="user-mail" type="email"
+            </label>
+            <label class="form__label">
+              <span class="form__name">Электронная почта*:</span>
+              <input class="form__input-text form__input-text--mail input-text" type="email"
                 placeholder="Введите e-mail">
-            </div>
+            </label>
           </fieldset>
           <fieldset class="form__group form__group--impression">
             <h3 class="form__title form__title--line title">
@@ -112,12 +112,12 @@
                 <span class="pick__name">Скорее положительное</span>
               </label>
               <label class="form__pick pick">
-                <input class="pick__input visually-hidden" type="radio" name="impression" value="negative" checked>
+                <input class="pick__input visually-hidden" type="radio" name="impression" value="negative">
                 <span class="pick__mark pick__mark--radio"></span>
                 <span class="pick__name">Скорее отрицательное</span>
               </label>
               <label class="form__pick pick">
-                <input class="pick__input visually-hidden" type="radio" name="impression" value="unsure" checked>
+                <input class="pick__input visually-hidden" type="radio" name="impression" value="unsure">
                 <span class="pick__mark pick__mark--radio"></span>
                 <span class="pick__name">Затрудняюсь ответить</span>
               </label>
@@ -160,7 +160,7 @@
           </fieldset>
           <div class="form__group form__group--submit">
             <button class="form__button button button--primary" type="submit">Отправить отзыв</button>
-            <span class="form__info">*&mdash;обязательные поля</span>
+            <span class="form__info">* &mdash; обязательные поля</span>
           </div>
 
         </form>

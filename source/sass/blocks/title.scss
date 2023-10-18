@@ -16,8 +16,6 @@
   }
 
   &--big {
-    font-size: 21px;
-
     @include m.tablet {
       font-size: 30px;
     }

@@ -14,7 +14,12 @@
   padding-right: 20px;
 
   @include m.tablet {
-    padding: 48px 70px 53px;
+    padding: 48px 70px 55px;
+  }
+
+  @include m.desktop {
+    padding-top: 59px;
+    padding-bottom: 44px;
   }
 }
 
@@ -78,10 +83,6 @@
   padding-left: 20px;
   grid-column: 1 / 4;
 
-  @include m.tablet {
-    line-height: 22px;
-  }
-
   &--back {
     background-color: v.$color-primary;
     color: v.$color-secondary;
@@ -139,6 +140,11 @@
     padding: 40px 12px;
   }
 
+  @include m.desktop {
+    padding: 52px 37px;
+  }
+
+
   &--no-back {
     border-bottom: 1px solid v.$color-border;
 
@@ -150,17 +156,34 @@
   &--city {
     padding-top: 70px;
     padding-bottom: 38px;
+
+    @include m.tablet {
+      padding: 52px 30px 25px;
+    }
+
+    @include m.desktop {
+      padding-left: 56px;
+      padding-right: 56px;
+    }
   }
 
   &--bridge {
     padding-top: 37px;
     padding-bottom: 37px;
+
+    @include m.tablet {
+      padding: 52px 30px 25px;
+    }
+
+    @include m.desktop {
+      padding-left: 83px;
+      padding-right: 83px;
+    }
   }
 
   &--city,
   &--bridge {
     @include m.tablet {
-      padding: 52px 30px 25px;
       max-width: calc(100% / 3);
     }
   }
@@ -169,10 +192,6 @@
     @include m.tablet {
       padding: 40px 20px;
     }
-  }
-
-  @include m.desktop {
-    padding: 52px 50px;
   }
 }
 
@@ -214,6 +233,10 @@
     padding: 156px 39px 60px;
   }
 
+  @include m.desktop {
+    padding: 168px 58px 68px;
+  }
+
   &:not(:last-child) {
     margin-bottom: 32px;
 
@@ -236,6 +259,10 @@
       top: 60px;
       transform: translateX(-50%);
       background-size: cover;
+    }
+
+    @include m.desktop {
+      top: 68px;
     }
   }
 

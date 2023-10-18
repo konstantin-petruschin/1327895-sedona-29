@@ -45,7 +45,7 @@ img {
   min-width: 320px;
 
   @include m.tablet {
-    line-height: 24px;
+    line-height: 22px;
   }
 }
 
@@ -67,5 +67,13 @@ main {
 
   @include m.desktop {
     box-shadow: 0 5px 15px 0 rgba(0, 1, 1, 0.2);
+  }
+}
+
+.text-transfer {
+  display: none;
+
+  @include m.tablet {
+    display: inline;
   }
 }

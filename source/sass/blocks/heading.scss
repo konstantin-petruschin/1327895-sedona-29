@@ -6,16 +6,24 @@
   text-align: center;
 
   @include m.tablet {
-    padding: 66px 135px;
+    padding: 63px 163px 96px;
   }
 
   @include m.desktop {
-    padding: 115px 350px;
+    padding: 115px 378px 55px;
   }
 }
 
 .heading__title {
   margin-bottom: 24px;
+
+  @include m.tablet {
+    margin-bottom: 19px;
+  }
+
+  @include m.desktop {
+    margin-bottom: 31px;
+  }
 }
 
 .heading__text {

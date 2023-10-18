@@ -29,6 +29,14 @@
   left: 0;
   right: 0;
 
+  @include m.tablet {
+    top: 95px;
+  }
+
+  @include m.desktop {
+    top: 100px;
+  }
+
   &--index {
     top: 90px;
 
@@ -45,8 +53,12 @@
   height: 158px;
 
   @include m.tablet {
+    height: 291px;
+  }
 
-    height: 333px;
+  @include m.desktop {
+    height: 300px;
+    object-position: bottom;
   }
 
   &--index {
