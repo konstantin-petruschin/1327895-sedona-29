@@ -177,13 +177,31 @@
 }
 
 .form__label {
+  position: relative;
   display: flex;
   flex-direction: column;
   text-align: left;
+  // z-index: 1;
+
+  // &::after {
+  //   content: "";
+  //   position: absolute;
+  //   width: 58px;
+  //   height: 58px;
+  //   display: block;
+  //   color: red;
+  //   z-index: 10;
+  // }
 }
 
 .form__name {
   margin-left: 14px;
+}
+
+.form__input-text--tel {
+  background-image: url("../img/icons/phone.svg");
+  background-repeat: no-repeat;
+
 }
 
 .form__group-comment {
