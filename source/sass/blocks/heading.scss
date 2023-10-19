@@ -12,6 +12,10 @@
   @include m.desktop {
     padding: 115px 378px 55px;
   }
+
+  &--catalog {
+    padding-bottom: 37px;
+  }
 }
 
 .heading__title {
