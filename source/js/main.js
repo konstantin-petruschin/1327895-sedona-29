@@ -28,12 +28,12 @@ function init() {
     zoom: 8
   });
 
-  marks.forEach(function(mark, i) {
+  marks.forEach(function(mark) {
     geoObjects.push(new ymaps.Placemark([mark.latitude, mark.longitude], {
       hintContent: mark.hintContent
     }, {
       iconLayout: 'default#Image',
-      iconImageHref: '../img/icons/pin.png',
+      iconImageHref: '../img/icons/pin.svg',
       iconImageSize: [27, 27]
     }))
   });

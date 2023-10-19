@@ -65,6 +65,7 @@
 
     @include m.desktop {
       padding-top: 65px;
+      padding-bottom: 50px;
     }
   }
 
@@ -95,7 +96,13 @@
       padding-top: 25px;
       padding-bottom: 65px;
     }
+
+    @include m.desktop {
+      padding-left: 95px;
+      padding-right: 95px;
+    }
   }
+
 }
 
 .form__title {
@@ -163,6 +170,7 @@
     @include m.desktop {
       padding-left: 50px;
       padding-right: 50px;
+      padding-top: 17px;
     }
   }
 
@@ -172,6 +180,11 @@
       padding-left: 80px;
       padding-right: 80px;
       gap: 18px 31px;
+    }
+
+    @include m.desktop {
+      padding: 33px 43px 45px;
+      column-gap: 64px;
     }
   }
 }
@@ -201,7 +214,6 @@
 .form__input-text--tel {
   background-image: url("../img/icons/phone.svg");
   background-repeat: no-repeat;
-
 }
 
 .form__group-comment {
@@ -211,6 +223,11 @@
 
   @include m.tablet {
     height: 158px;
+  }
+
+  @include m.desktop {
+    max-width: 768px;
+    margin: 0 auto;
   }
 }
 
