@@ -1,0 +1,50 @@
+@use "../mixins/media.scss" as m;
+@use "../comman/variables.scss" as v;
+
+.video-block {
+  padding: 15px 20px 0;
+}
+
+.video-block__title {
+  margin-bottom: 27px;
+}
+
+.video-block__text {
+  padding: 0;
+  margin: 0;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 38px;
+}
+
+.video-block__wrapper {
+  position: relative;
+}
+
+.video-block__img {
+  display: block;
+}
+
+.video-block__button {
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: transparent;
+  outline: none;
+}
+
+.video-block__icon {
+  color: rgba(v.$color-secondary, $alpha: 0.7);
+}
+
+.video-block__button:hover .video-block__icon,
+.video-block__button:focus .video-block__icon {
+  color: rgba(v.$color-secondary, $alpha: 0.3);
+}
+
+.video-block__button:active .video-block__icon {
+  color: rgba(v.$color-title, $alpha: 0.3);
+}

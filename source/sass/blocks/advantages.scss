@@ -3,11 +3,23 @@
 
 .advantages {
   padding-top: 32px;
+
+  @include m.tablet {
+    padding-top: 0;
+  }
 }
 
 .advantages__wrapper {
+  padding-left: 20px;
+  padding-right: 20px;
+
   @include m.tablet {
-    padding: 47px 70px 50px;
+    padding: 48px 70px 55px;
+  }
+
+  @include m.desktop {
+    padding-top: 59px;
+    padding-bottom: 44px;
   }
 }
 
@@ -16,6 +28,7 @@
   max-width: 270px;
 
   @include m.tablet {
+    margin-bottom: 27px;
     max-width: 520px;
   }
 }
@@ -32,11 +45,19 @@
 
 .advantages__name {
   margin-bottom: 11px;
+
+  @include m.tablet {
+    max-width: 155px;
+  }
 }
 
 .advantages__number {
   margin-bottom: 17px;
   display: inline-block;
+
+  @include m.tablet {
+    margin-bottom: 22px;
+  }
 }
 
 .advantages__description {
@@ -50,9 +71,8 @@
   list-style: none;
 
   @include m.tablet {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
@@ -61,7 +81,7 @@
   position: relative;
   padding-right: 20px;
   padding-left: 20px;
-
+  grid-column: 1 / 4;
 
   &--back {
     background-color: v.$color-primary;
@@ -73,37 +93,57 @@
     content: "";
     position: absolute;
     display: block;
-    background-image: url("../img/background-advantages.svg");
+    background-image: url("../img/triangle-advantages.svg");
+    background-position: center;
     background-repeat: no-repeat;
+    background-size: cover;
+    left: 0;
+    right: 0;
     top: -1px;
-    width: 320px;
     height: 37px;
     z-index: 5;
-
 
     @include m.tablet {
       display: none;
     }
   }
+
+  &--area {
+    grid-column: 1 / 2;
+  }
+
+  &--road {
+    grid-column: 2 / 3;
+  }
+
+  &--tourists {
+    grid-column: 3 / 4;
+  }
 }
 
 .advantages__item-container {
   @include m.tablet {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
+    display: flex;
+  }
+
+  &--reverse {
+    @include m.tablet {
+      flex-direction: row-reverse;
+    }
   }
 }
 
 .advantages__item-wrapper {
-  padding: 24px 12px;
+  padding: 24px 17px;
 
   @include m.tablet {
-    padding: 60px 33px;
+    padding: 40px 12px;
   }
 
   @include m.desktop {
-    padding: 52px 50px;
+    padding: 52px 37px;
   }
+
 
   &--no-back {
     border-bottom: 1px solid v.$color-border;
@@ -114,13 +154,16 @@
   }
 
   &--city {
-    position: relative;
-    padding-top: 54px;
-    padding-bottom: 40px;
+    padding-top: 70px;
+    padding-bottom: 38px;
 
     @include m.tablet {
-      padding-top: 54px;
-      padding-bottom: 40px;
+      padding: 52px 30px 25px;
+    }
+
+    @include m.desktop {
+      padding-left: 56px;
+      padding-right: 56px;
     }
   }
 
@@ -129,8 +172,25 @@
     padding-bottom: 37px;
 
     @include m.tablet {
-      padding-top: 54px;
-      padding-bottom: 40px;
+      padding: 52px 30px 25px;
+    }
+
+    @include m.desktop {
+      padding-left: 83px;
+      padding-right: 83px;
+    }
+  }
+
+  &--city,
+  &--bridge {
+    @include m.tablet {
+      max-width: calc(100% / 3);
+    }
+  }
+
+  &--road {
+    @include m.tablet {
+      padding: 40px 20px;
     }
   }
 }
@@ -141,11 +201,17 @@
 
 .advantages__image {
   display: block;
+  width: 100%;
+  height: 260px;
+
+  @include m.tablet {
+    height: 256px;
+  }
 }
 
 .advantages__services {
   margin: 0;
-  padding: 25px 20px;
+  padding: 32px 20px 44px;
   text-align: left;
   list-style: none;
   background-color: v.$color-secondary;
@@ -164,11 +230,15 @@
   padding-left: 45px;
 
   @include m.tablet {
-    padding: 156px 33px 60px;
+    padding: 156px 39px 60px;
+  }
+
+  @include m.desktop {
+    padding: 168px 58px 68px;
   }
 
   &:not(:last-child) {
-    margin-bottom: 25px;
+    margin-bottom: 32px;
 
     @include m.tablet {
       margin-bottom: 0;
@@ -189,6 +259,10 @@
       top: 60px;
       transform: translateX(-50%);
       background-size: cover;
+    }
+
+    @include m.desktop {
+      top: 68px;
     }
   }
 
@@ -228,6 +302,10 @@
 
 .advantages__subtitle {
   margin-bottom: 16px;
+
+  @include m.tablet {
+    margin-bottom: 22px;
+  }
 }
 
 .advantages__services-text {

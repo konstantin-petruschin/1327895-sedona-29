@@ -1,0 +1,65 @@
+@use "../mixins/media.scss" as m;
+@use "../comman/variables.scss" as v;
+
+.pick {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.pick__name {
+  text-transform: none;
+  font-size: 18px;
+  font-weight: 700;
+  margin-left: 16px;
+}
+
+.pick__mark {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 46px;
+  height: 46px;
+  border: 1px solid transparent;
+  background-color: v.$color-background;
+
+  &--radio {
+    border-radius: 50%;
+  }
+
+  &--checkbox {
+    border-radius: 4px;
+  }
+}
+
+.pick__input:checked + .pick__mark--radio::before {
+  content: "";
+  display: block;
+  width: 16px;
+  height: 16px;
+  background-color: v.$color-text;
+  border-radius: 50%;
+}
+
+.pick__input:checked + .pick__mark--checkbox::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 22px;
+  height: 16px;
+  background: url("../img/icons/check.svg") no-repeat;
+}
+
+.pick:hover .pick__mark,
+.pick:focus .pick__mark {
+  background-color: v.$color-input-hover;
+}
+
+.pick:active .pick__mark {
+  background-color: #d5d5d5;
+}
+
+
+.pick:active .pick__mark::before {
+  opacity: 0.3;
+}

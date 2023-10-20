@@ -2,10 +2,12 @@
 
 .promo {
   position: relative;
+  min-height: 158px;
 
   &::after {
     position: absolute;
-    background-image: url("../img/promo-bottom-mobile.svg");
+    background-image: url("../img/promo-bottom-tablet.svg");
+    background-position: bottom center;
     background-repeat: no-repeat;
     background-size: cover;
     left: 0;
@@ -15,10 +17,6 @@
     bottom: 0;
     z-index: 6;
     display: inline-block;
-
-    @include m.tablet {
-      background-image: url("../img/promo-bottom-tablet.svg");
-    }
   }
 }
 
@@ -31,13 +29,43 @@
   left: 0;
   right: 0;
 
+  @include m.tablet {
+    top: 95px;
+  }
+
+  @include m.desktop {
+    top: 100px;
+  }
+
   &--index {
-    top: 70px;
+    top: 90px;
+
+    @include m.tablet {
+      top: 77px;
+    }
   }
 }
 
 .promo__background {
   display: block;
   width: 100%;
-  height: 389px;
+  background-position: bottom;
+  height: 158px;
+
+  @include m.tablet {
+    height: 291px;
+  }
+
+  @include m.desktop {
+    height: 300px;
+    object-position: bottom;
+  }
+
+  &--index {
+    height: 389px;
+
+    @include m.tablet {
+      height: 518px;
+    }
+  }
 }

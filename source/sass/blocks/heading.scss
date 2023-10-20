@@ -1,0 +1,36 @@
+@use "../mixins/media.scss" as m;
+@use "../comman/variables.scss" as v;
+
+.heading {
+  padding: 36px 20px 28px;
+  text-align: center;
+
+  @include m.tablet {
+    padding: 63px 163px 96px;
+  }
+
+  @include m.desktop {
+    padding: 115px 378px 55px;
+  }
+
+  &--catalog {
+    padding-bottom: 37px;
+  }
+}
+
+.heading__title {
+  margin-bottom: 24px;
+
+  @include m.tablet {
+    margin-bottom: 19px;
+  }
+
+  @include m.desktop {
+    margin-bottom: 31px;
+  }
+}
+
+.heading__text {
+  margin: 0;
+  padding: 0;
+}

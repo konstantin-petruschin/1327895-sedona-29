@@ -9,17 +9,27 @@
   padding: 0;
   margin-left: auto;
   margin-right: auto;
-  line-height: 26px;
+  line-height: 27px;
+
+  @include m.tablet {
+    font-size: 21px;
+  }
 
   &--big {
-    font-size: 21px;
+    @include m.tablet {
+      font-size: 30px;
+    }
   }
 
   &--back {
     color: v.$color-secondary;
   }
 
-  @include m.tablet {
-    font-size: 21px;
+  &--min {
+    font-size: 14px;
+
+    @include m.desktop {
+      color: v.$color-secondary;
+    }
   }
 }

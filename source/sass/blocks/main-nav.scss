@@ -1,6 +1,12 @@
 @use "../mixins/media.scss" as m;
 @use "../comman/variables.scss" as v;
 
+.no-js {
+  .main-nav {
+    display: block;
+  }
+}
+
 .main-nav {
   position: absolute;
   top: 0;
@@ -8,7 +14,7 @@
   width: 100%;
   display: none;
   text-align: center;
-  z-index: 4;
+  z-index: 7;
 
   &--opened {
     display: block;
@@ -29,7 +35,7 @@
 
   @include m.tablet {
     display: grid;
-    grid-template-columns: repeat(2, 1fr) 185px repeat(2, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     width: 100%;
     background-color: v.$color-secondary;
   }
@@ -37,6 +43,14 @@
 
 .main-nav__item {
   margin-bottom: 1px;
+
+  &:nth-child(3) {
+    grid-column: 4 / 5;
+  }
+
+  &:nth-child(4) {
+    grid-column: 5 / 6;
+  }
 }
 
 .main-nav__link {
@@ -50,8 +64,27 @@
   font-weight: 700;
   color: v.$color-secondary;
 
+  &:hover,
+  &:focus {
+    outline: none;
+    color: v.$color-primary-hover;
+  }
+
+  &:active {
+    color: rgba(v.$color-title, $alpha: 0.3);
+  }
+
   @include m.tablet {
     color: v.$color-title;
     box-shadow: none;
+  }
+
+  &--current,
+  &--current:hover,
+  &--current:focus,
+  &--current:active {
+    @include m.tablet {
+      color: #766357;
+    }
   }
 }

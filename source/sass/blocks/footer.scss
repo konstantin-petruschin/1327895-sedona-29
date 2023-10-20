@@ -6,12 +6,16 @@
   flex-direction: column;
   align-items: center;
   row-gap: 30px;
-  padding-top: 33px;
-  padding-bottom: 33px;
+  padding: 33px 20px;
 
   @include m.tablet {
     flex-direction: row;
     justify-content: space-between;
+    padding: 36px 60px;
+  }
+
+  @include m.desktop {
+    padding: 36px 120px;
   }
 }
 

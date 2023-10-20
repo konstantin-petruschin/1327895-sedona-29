@@ -45,45 +45,35 @@ img {
   min-width: 320px;
 
   @include m.tablet {
-    font-size: 16px;
-    line-height: 24px;
+    line-height: 22px;
   }
 }
 
 main {
   flex: 1;
+
+  @include m.desktop {
+    max-width: v.$desktop;
+    margin: 0 auto;
+  }
 }
 
-.container {
+.page__container {
   min-width: v.$phone;
+  max-width: v.$desktop;
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 20px;
-  padding-right: 20px;
-
-
-  @include m.tablet {
-    min-width: v.$tablet;
-    padding-left: 30px;
-    padding-right: 30px;
-  }
 
   @include m.desktop {
-    min-width: v.$desktop;
-    padding-left: 110px;
-    padding-right: 110px;
+    box-shadow: 0 5px 15px 0 rgba(0, 1, 1, 0.2);
   }
+}
 
-  &--form {
-    @include m.tablet {
-      padding-left: 70px;
-      padding-right: 70px;
-    }
+.text-transfer {
+  display: none;
 
-    @include m.desktop {
-      padding-left: 110px;
-      padding-right: 110px;
-    }
+  @include m.tablet {
+    display: inline;
   }
 }

@@ -1,0 +1,17 @@
+@use "../mixins/media.scss" as m;
+
+.page-main {
+  text-align: center;
+}
+
+.page-main__promo {
+  min-height: 332px;
+}
+
+.page-main__map {
+  margin-bottom: 8px;
+
+  @include m.tablet {
+    margin-bottom: 0;
+  }
+}

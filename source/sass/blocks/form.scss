@@ -1,11 +1,251 @@
 @use "../mixins/media.scss" as m;
 @use "../comman/variables.scss" as v;
 
+.form {
+  @include m.tablet {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 .form__group {
   border: none;
   border-top: 1px solid v.$color-border;
+  padding: 23px 20px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+
+  @include m.tablet {
+    border: none;
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+
+  @include m.desktop {
+    padding-left: 120px;
+    padding-right: 120px;
+  }
+
+  &--name {
+    padding-bottom: 42px;
+    grid-column: 1 / 2;
+
+    @include m.tablet {
+      border-right: 1px solid #dbdbdb;
+      padding: 10px 29px 8px 59px;
+    }
+
+    @include m.desktop {
+      padding: 10px 45px 8px 120px;
+    }
+  }
+
+  &--contacts {
+    padding-bottom: 38px;
+    grid-column: 2 / 3;
+
+    @include m.tablet {
+      padding: 10px 59px 8px 30px;
+    }
+
+    @include m.desktop {
+      padding: 10px 120px 8px 48px;
+    }
+  }
+
+  &--impression {
+    grid-column: 1 / -1;
+    padding-bottom: 23px;
+
+    @include m.tablet {
+      padding-top: 55px;
+      padding-bottom: 25px;
+    }
+
+    @include m.desktop {
+      padding-top: 65px;
+      padding-bottom: 50px;
+    }
+  }
+
+  &--attractions {
+    grid-column: 1 / -1;
+  }
+
+  &--description {
+    grid-column: 1 / -1;
+    width: 100%;
+    gap: 20px;
+
+    @include m.tablet {
+      padding-top: 18px;
+    }
+  }
+
+  &--submit {
+    grid-column: 1 / -1;
+    padding-top: 30px;
+    padding-bottom: 15px;
+    gap: 3px;
+
+    @include m.tablet {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      align-items: center;
+      padding-top: 25px;
+      padding-bottom: 65px;
+    }
+
+    @include m.desktop {
+      padding-left: 216px;
+      padding-right: 216px;
+      padding-top: 23px;
+    }
+  }
 }
 
 .form__title {
   text-align: center;
+  margin-bottom: 3px;
+  position: relative;
+
+  @include m.tablet {
+    margin-bottom: 10px;
+  }
+}
+
+.form__title--line {
+  width: 100%;
+
+  @include m.tablet {
+    &::after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 1px;
+      background-color: #dbdbdb;
+      position: absolute;
+      top: 50%;
+      z-index: -1;
+    }
+  }
+}
+
+.form__title-text {
+  background-color: v.$color-secondary;
+  display: inline-block;
+
+  @include m.tablet {
+    max-width: 430px;
+    padding-left: 65px;
+    padding-right: 65px;
+  }
+}
+
+.form__group-list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 16px;
+
+  @include m.tablet {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include m.desktop {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 64px;
+  }
+
+  &--impression {
+    @include m.tablet {
+      padding-left: 33px;
+      padding-right: 33px;
+    }
+
+    @include m.desktop {
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 17px;
+    }
+  }
+
+
+  &--attractions {
+    @include m.tablet {
+      padding-left: 80px;
+      padding-right: 80px;
+      gap: 18px 31px;
+    }
+
+    @include m.desktop {
+      padding: 33px 43px 45px;
+      column-gap: 64px;
+    }
+  }
+}
+
+.form__label {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  // z-index: 1;
+
+  // &::after {
+  //   content: "";
+  //   position: absolute;
+  //   width: 58px;
+  //   height: 58px;
+  //   display: block;
+  //   color: red;
+  //   z-index: 10;
+  // }
+}
+
+.form__name {
+  margin-left: 14px;
+}
+
+.form__input-text--tel {
+  background-image: url("../img/icons/phone.svg");
+  background-repeat: no-repeat;
+}
+
+.form__group-comment {
+  width: 100%;
+  height: 150px;
+  line-height: 25px;
+
+  @include m.tablet {
+    height: 158px;
+  }
+
+  @include m.desktop {
+    max-width: 768px;
+    margin: 0 auto;
+  }
+}
+
+
+.form__button {
+  grid-column: 1 / 2;
+  padding: 19px;
+  width: 100%;
+  font-size: 18px;
+}
+
+.form__info {
+  grid-column: 2 / 3;
+  text-align: right;
+  font-size: 12px;
+
+  @include m.tablet {
+    font-size: 14px;
+    margin-top: 7px;
+  }
 }
