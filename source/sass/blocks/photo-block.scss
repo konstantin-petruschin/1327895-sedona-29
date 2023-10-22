@@ -5,10 +5,13 @@
   @include m.tablet {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    padding: 48px 60px 0;
   }
 
   @include m.desktop {
     grid-template-columns: repeat(3, 1fr);
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 
@@ -55,7 +58,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 22px 20px 15px;
+    padding: 18px 20px 14px;
     background-color: v.$color-background;
 
     &--back {
@@ -69,10 +72,12 @@
     width: 100%;
     color: v.$color-secondary;
     background-color: rgba(v.$color-title, $alpha: 0.3);
-    padding: 17px 25px 17px;
+    padding: 18px 20px 18px 25px;
+  }
 
-    &--big {
-      padding: 22px 21px 15px;
+  &--big {
+    @include m.desktop {
+      padding: 18px 20px 15px;
     }
   }
 }
@@ -87,6 +92,11 @@
   display: flex;
   align-items: baseline;
   gap: 14px;
+
+  @include m.tablet {
+    gap: 9px;
+    align-items: center;
+  }
 }
 
 .photo-block__likes-button {

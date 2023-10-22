@@ -15,6 +15,15 @@
 
   &--catalog {
     padding-bottom: 37px;
+
+    @include m.tablet {
+      padding-top: 60px;
+    }
+
+    @include m.desktop {
+      padding-top: 100px;
+      padding-bottom: 39px;
+    }
   }
 }
 
@@ -27,6 +36,12 @@
 
   @include m.desktop {
     margin-bottom: 31px;
+  }
+
+  &--catalog {
+    @include m.tablet {
+      margin-bottom: 30px;
+    }
   }
 }
 
