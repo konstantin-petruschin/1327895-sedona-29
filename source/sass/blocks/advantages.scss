@@ -134,22 +134,37 @@
 }
 
 .advantages__item-wrapper {
-  padding: 24px 17px;
-
-  @include m.tablet {
-    padding: 40px 12px;
-  }
-
-  @include m.desktop {
-    padding: 52px 37px;
-  }
-
+  padding: 24px 15px;
 
   &--no-back {
     border-bottom: 1px solid v.$color-border;
 
     @include m.tablet {
       border: none;
+      padding: 40px 18px;
+    }
+
+    @include m.desktop {
+      padding: 52px 37px;
+    }
+  }
+
+  &--tourists {
+    @include m.tablet {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    @include m.desktop {
+      padding-left: 37px;
+      padding-right: 37px;
+    }
+  }
+
+  &--city,
+  &--bridge {
+    @include m.tablet {
+      max-width: calc(100% / 3);
     }
   }
 
@@ -178,19 +193,6 @@
     @include m.desktop {
       padding-left: 83px;
       padding-right: 83px;
-    }
-  }
-
-  &--city,
-  &--bridge {
-    @include m.tablet {
-      max-width: calc(100% / 3);
-    }
-  }
-
-  &--road {
-    @include m.tablet {
-      padding: 40px 20px;
     }
   }
 }

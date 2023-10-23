@@ -35,7 +35,7 @@
   }
 
   @include m.desktop {
-    margin-bottom: 31px;
+    margin-bottom: 30px;
   }
 
   &--catalog {
@@ -48,4 +48,8 @@
 .heading__text {
   margin: 0;
   padding: 0;
+
+  @include m.tablet {
+    line-height: 22px;
+  }
 }
