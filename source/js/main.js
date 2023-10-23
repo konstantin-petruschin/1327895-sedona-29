@@ -28,6 +28,8 @@ function init() {
     {
       hintContent: '<div class="map__hint">Седона</div>'
     }, {
-      preset: 'islands#blueCircleDotIconWithCaption'
+      iconLayout: 'default#image',
+      iconImageHref: '../img/icons/pin.svg',
+      icon_imagesize: [27, 27]
     }))
 }

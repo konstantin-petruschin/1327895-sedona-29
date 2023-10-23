@@ -205,18 +205,21 @@
   </div>
 
   <div class="modal">
-    <div class="modal__wrapper modal">
-      <p class="modal-error__title title">Что-то пошло не так</p>
-      <p class="modal-error__text">Проверьте поля выделенные красным, скорее всего вы их забыли заполнить</p>
-      <button class="modal-error__button button button--primary" type="button">Ok</button>
+    <div class="modal__wrapper modal__wrapper--error">
+      <p class="modal__title title">Что-то пошло не так!</p>
+      <p class="modal__text modal__text--error">Проверьте поля выделенные красным, скорее всего вы их забыли заполнить</p>
+      <button class="modal__button modal__button--error button button--primary" type="button">Ok</button>
     </div>
   </div>
 
   <div class="modal">
-    <div class="modal-shipment__wrapper">
-      <p class="modal-shipment__title title">Ваш отзыв отправлен</p>
-      <p class="modal-shipment__text">Спасибо за ваше участиеб ваш отзыв уже поступил к намю В ближайшее время мы опубликуем его на сайте</p>
-      <button class="modal-shipment__button button button--primary" type="button">Закрыть окно</button>
+    <div class="modal__wrapper modal__wrapper--shipment">
+      <p class="modal__title title">Ваш отзыв отправлен</p>
+      <p class="modal__text modal__text--shipment">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В&nbsp;ближайшее время мы опубликуем его на сайте</p>
+      <div class="modal__button-wrapper">
+        <button class="modal__button button button--primary" type="button">Закрыть окно</button>
+      </div>
+
     </div>
   </div>
 
