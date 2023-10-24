@@ -20,7 +20,7 @@
     border: none;
     padding-left: 60px;
     padding-right: 60px;
-    padding-bottom: 26px;
+    padding-bottom: 25px;
   }
 
   @include m.desktop {
@@ -77,33 +77,35 @@
   &--description {
     grid-column: 1 / -1;
     width: 100%;
-    gap: 20px;
+    gap: 19px;
 
     @include m.tablet {
       padding-top: 18px;
+      gap: 16px;
     }
 
     @include m.desktop {
       padding-top: 15px;
+      gap: 19px;
     }
   }
 
   &--submit {
     grid-column: 1 / -1;
-    padding-top: 30px;
-    padding-bottom: 22px;
-    gap: 3px;
+    padding-top: 31px;
+    padding-bottom: 23px;
+    gap: 2px;
 
     @include m.tablet {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       align-items: center;
-      padding-top: 24px;
-      padding-bottom: 62px;
+      padding-top: 22px;
+      padding-bottom: 63px;
     }
 
     @include m.desktop {
-      padding: 23px 216px 65px;
+      padding: 25px 216px 65px;
     }
   }
 }

@@ -4,13 +4,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HTML Academy: Седона</title>
   <link rel="stylesheet" href="css/style.min.css">
   <link rel="icon" href="favicon.ico">
   <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/favicons/apple.png">
   <link rel="manifest" href="manifest.webmanifest">
-
-  <title>HTML Academy: Седона</title>
+  <link rel="preload" href="fonts/ptsans.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/ptsansbold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
   <script src="https://api-maps.yandex.ru/2.1/?apikey=05c44d75-7165-414e-b9aa-78dacc85a092&lang=ru_RU" defer>
   </script>
   <script src="./js/main.js" defer></script>
@@ -78,24 +79,29 @@
             <div class="advantages__item-container">
               <div class="advantages__item-wrapper advantages__item-wrapper--city">
                 <h3 class="advantages__name title title--back">Настоящий городок</h3>
-                  <span class="advantages__number">&#8212; №1 &#8212;</span>
-                  <p class="advantages__description">Седона не аттракцион для туристов, там течет своя жизнь</p>
+                <span class="advantages__number">&#8212; №1 &#8212;</span>
+                <p class="advantages__description">Седона не аттракцион для туристов, там течет своя жизнь</p>
               </div>
+              <div class="advantages__image-wrapper">
                 <picture>
-                <source type="image/webp" media="(min-width: 1200px)"
-                  srcset="./img/photo-city-desktop.webp 1x, ./img/photo-city-desktop@2x.webp 2x" width="800"
-                  height="256">
-                <source type="image/webp" media="(min-width: 768px)"
-                  srcset="./img/photo-city-tablet.webp 1x, ./img/photo-city-tablet@2x.webp 2x" width="512" height="256">
-                <source type="image/webp" srcset="./img/photo-city-mobile.webp 1x, ./img/photo-city-mobile@2x.webp 2x"
-                  width="320" height="260">
-                <source media="(min-width: 1200px)"
-                  srcset="./img/photo-city-desktop.jpg 1x, ./img/photo-city-desktop@2x.jpg 2x" width="800" height="256">
-                <source media="(min-width: 768px)"
-                  srcset="./img/foto-city-tablet.jpg 1x, ./img/photo-city-tablet@2x.jpg 2x" width="512" height="256">
-                <img class="advantages__image" src="./img/photo-city-mobile.jpg"
-                  srcset="./img/photo-city-mobile@2x.jpg 2x" alt="Мотель." width="320" height="260">
-              </picture>
+                  <source type="image/webp" media="(min-width: 1200px)"
+                    srcset="./img/photo-city-desktop.webp 1x, ./img/photo-city-desktop@2x.webp 2x" width="800"
+                    height="256">
+                  <source type="image/webp" media="(min-width: 768px)"
+                    srcset="./img/photo-city-tablet.webp 1x, ./img/photo-city-tablet@2x.webp 2x" width="512"
+                    height="256">
+                  <source type="image/webp" srcset="./img/photo-city-mobile.webp 1x, ./img/photo-city-mobile@2x.webp 2x"
+                    width="320" height="260">
+                  <source media="(min-width: 1200px)"
+                    srcset="./img/photo-city-desktop.jpg 1x, ./img/photo-city-desktop@2x.jpg 2x" width="800"
+                    height="256">
+                  <source media="(min-width: 768px)"
+                    srcset="./img/foto-city-tablet.jpg 1x, ./img/photo-city-tablet@2x.jpg 2x" width="512" height="256">
+                  <img class="advantages__image" src="./img/photo-city-mobile.jpg"
+                    srcset="./img/photo-city-mobile@2x.jpg 2x" alt="Мотель." width="320" height="260">
+                </picture>
+              </div>
+
 
 
             </div>
@@ -123,7 +129,8 @@
                 <span class="advantages__number">&#8212; №2 &#8212;</span>
                 <p class="advantages__description">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
               </div>
-              <picture>
+              <div class="advantages__image-wrapper">
+                <picture>
                 <source type="image/webp" media="(min-width: 1200px)"
                   srcset="./img/photo-bridge-desktop.webp 1x, ./img/photo-bridge-desktop@2x.webp 2x" width="800"
                   height="256">
@@ -142,6 +149,8 @@
                 <img class="advantages__image" src="./img/photo-bridge-mobile.jpg"
                   srcset="./img/photo-bridge-mobile@2x.jpg 2x" width="320" height="260" alt="Мост дьявола">
               </picture>
+              </div>
+
             </div>
 
           </li>

@@ -72,7 +72,7 @@
     width: 100%;
     color: v.$color-secondary;
     background-color: rgba(v.$color-title, $alpha: 0.3);
-    padding: 18px 20px 18px 25px;
+    padding: 15px 20px 18px 25px;
   }
 
   &--big {
@@ -95,7 +95,7 @@
 
   @include m.tablet {
     gap: 9px;
-    align-items: center;
+    align-items: flex-end;
   }
 }
 

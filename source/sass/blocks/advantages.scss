@@ -201,6 +201,10 @@
   border: none;
 }
 
+.advantages__image-wrapper {
+  flex-grow: 1;
+}
+
 .advantages__image {
   display: block;
   width: 100%;
