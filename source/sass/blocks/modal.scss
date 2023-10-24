@@ -2,7 +2,7 @@
 @use "../mixins/media.scss" as m;
 
 .modal {
-  // display: none;
+  display: none;
   width: 100%;
   height: 100%;
   background-color: rgba(v.$color-title, $alpha: 0.3);
@@ -13,14 +13,14 @@
     left: 0;
     margin: auto;
     display: flex;
-    width: 100%;
-    height: 100%;
+    justify-content: center;
     z-index: 10;
   }
 }
 
-.modal__wrapper {
+.modal__container {
   width: 320px;
+  height: min-content;
   background-color: v.$color-secondary;
   display: flex;
   flex-direction: column;
