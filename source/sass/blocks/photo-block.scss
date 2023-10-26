@@ -50,7 +50,7 @@
   text-align: left;
   display: flex;
   flex-direction: column;
-  gap: 9px;
+  gap: 9px 30px;
   font-size: 14px;
   line-height: 21px;
 
@@ -118,6 +118,7 @@
 .photo-block__likes-button:hover .photo-block__icon,
 .photo-block__likes-button:focus .photo-block__icon {
   color: v.$color-primary-hover;
+  outline: none;
 }
 
 .photo-block__likes-button:active .photo-block__icon {

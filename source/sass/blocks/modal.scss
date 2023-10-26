@@ -11,7 +11,6 @@
     position: fixed;
     top: 0;
     left: 0;
-    margin: auto;
     display: flex;
     justify-content: center;
     z-index: 10;
@@ -19,8 +18,8 @@
 }
 
 .modal__container {
-  width: 320px;
-  height: min-content;
+  width: 100%;
+  margin: auto;
   background-color: v.$color-secondary;
   display: flex;
   flex-direction: column;
@@ -30,19 +29,22 @@
 
   &--error {
     padding: 45px 42px 35px 41px;
+    min-height: 280px;
 
     @include m.tablet {
       width: 400px;
-      padding: 50px 47px 49px 46px;
+      min-height: 347px;
+      padding: 48px 47px 49px 46px;
     }
 
     @include m.desktop {
-      padding-top: 50px;
+      padding-top: 45px;
     }
   }
 
   &--shipment {
-    padding-top: 39px;
+    min-height: 328px;
+    // padding: 45px 42px 35px 41px;
 
     @include m.tablet {
       padding-top: 53px;
@@ -56,7 +58,15 @@
 }
 
 .modal__title {
-  margin-bottom: 34px;
+  margin-bottom: 24px;
+
+  @include m.tablet {
+    margin-bottom: 21px;
+  }
+
+  @include m.desktop {
+    margin-bottom: 25px;
+  }
 }
 
 .modal__text {
@@ -65,6 +75,10 @@
 
   &--error {
     margin-bottom: 28px;
+
+    @include m.tablet {
+      margin-bottom: 47px;
+    }
   }
 
   &--shipment {
@@ -88,14 +102,21 @@
 }
 
 .modal__button {
-  padding: 18px 20px 14px;
+  padding: 21px 20px 16px;
   width: 100%;
+  font-size: 18px;
+
+  @include m.tablet {
+
+    font-size: 21px;
+  }
 
   &--error {
     width: 180px;
 
     @include m.tablet {
       width: 272px;
+      padding: 18px 20px 14px;
     }
   }
 }

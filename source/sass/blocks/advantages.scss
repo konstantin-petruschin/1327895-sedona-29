@@ -71,8 +71,9 @@
   list-style: none;
 
   @include m.tablet {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
   }
 }
 
@@ -108,16 +109,10 @@
     }
   }
 
-  &--area {
-    grid-column: 1 / 2;
-  }
-
-  &--road {
-    grid-column: 2 / 3;
-  }
-
-  &--tourists {
-    grid-column: 3 / 4;
+  &--no-back {
+    @include m.tablet {
+      width: calc(100% / 3);
+    }
   }
 }
 
