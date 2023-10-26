@@ -47,6 +47,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
+  max-width: 160px;
 }
 
 .footer__social-link {
@@ -59,6 +60,11 @@
 
 .footer__social-link:active .footer__icon {
   opacity: 0.3;
+}
+
+.footer__wrapper {
+  display: flex;
+  flex-direction: column;
 }
 
 .footer__developer {
