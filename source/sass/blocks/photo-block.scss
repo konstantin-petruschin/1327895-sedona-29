@@ -1,5 +1,5 @@
 @use "../mixins/media.scss" as m;
-@use "../comman/variables.scss" as v;
+@use "../common/variables.scss" as v;
 
 .photo-block {
   @include m.tablet {
@@ -22,11 +22,17 @@
 
   &:last-child {
     border-bottom: 1px solid v.$color-input-hover;
+
+    @include m.tablet {
+      border: none;
+    }
   }
 
   @include m.tablet {
     border: none;
     padding: 0;
+    display: flex;
+    flex-direction: column;
   }
 
   &--big {
@@ -57,9 +63,10 @@
   @include m.tablet {
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     padding: 18px 20px 14px;
     background-color: v.$color-background;
+    flex-grow: 1;
 
     &--back {
       background-color: #eaeaea;
@@ -77,7 +84,7 @@
 
   &--big {
     @include m.desktop {
-      padding: 18px 20px 15px;
+      padding: 18px 20px 14px;
     }
   }
 }
@@ -95,7 +102,18 @@
 
   @include m.tablet {
     gap: 9px;
-    align-items: flex-end;
+    margin-top: 9px;
+  }
+
+  @include m.desktop {
+    margin-top: 15px;
+    align-items: center;
+  }
+
+  &--big {
+    @include m.desktop {
+      margin-top: 11px;
+    }
   }
 }
 

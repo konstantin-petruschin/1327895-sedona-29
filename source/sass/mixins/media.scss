@@ -1,4 +1,4 @@
-@use "../comman/variables.scss" as m;
+@use "../common/variables.scss" as m;
 
 @mixin desktop {
   @media screen and (min-width: m.$desktop) {

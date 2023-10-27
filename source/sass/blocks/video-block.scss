@@ -1,5 +1,5 @@
 @use "../mixins/media.scss" as m;
-@use "../comman/variables.scss" as v;
+@use "../common/variables.scss" as v;
 
 .video-block {
   padding: 15px 20px 0;
@@ -9,7 +9,7 @@
   }
 
   @include m.desktop {
-    padding: 58px 200px 85px;
+    padding: 60px 200px 85px;
   }
 }
 
