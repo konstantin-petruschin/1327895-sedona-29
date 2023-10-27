@@ -47,12 +47,12 @@
     padding-top: 39px;
 
     @include m.tablet {
-      padding-top: 43px;
+      padding-top: 44px;
       width: 640px;
     }
 
     @include m.desktop {
-      padding-top: 51px;
+      padding-top: 42px;
     }
   }
 }
@@ -103,7 +103,7 @@
 }
 
 .modal__button {
-  padding: 21px 20px 16px;
+  padding: 16px 20px;
   width: 100%;
   font-size: 18px;
 
