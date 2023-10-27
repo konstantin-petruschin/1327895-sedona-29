@@ -24,4 +24,8 @@
     border-color: v.$color-input-hover;
     background-color: v.$color-secondary;
   }
+
+  &:not(:placeholder-shown):invalid {
+    border-color: #ff8282;
+  }
 }
