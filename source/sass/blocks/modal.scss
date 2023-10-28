@@ -44,15 +44,19 @@
 
   &--shipment {
     min-height: 324px;
-    padding-top: 39px;
+    padding: 39px 20px 20px;
+    background: linear-gradient(to top, v.$color-background 100px, v.$color-secondary 100px);
 
     @include m.tablet {
       padding-top: 44px;
       width: 640px;
+      background: linear-gradient(to top, v.$color-background 137px, v.$color-secondary 137px);
     }
 
     @include m.desktop {
-      padding-top: 42px;
+      padding-top: 40px;
+      padding-bottom: 42px;
+      background: linear-gradient(to top, v.$color-background 145px, v.$color-secondary 145px);
     }
   }
 }
@@ -75,35 +79,31 @@
   padding: 0;
 
   &--error {
-    margin-bottom: 28px;
+    margin-bottom: 30px;
+    width: 210px;
 
     @include m.tablet {
-      margin-bottom: 47px;
+      margin-bottom: 44px;
+      width: 290px;
     }
   }
 
   &--shipment {
-    margin-bottom: 52px;
+    margin-bottom: 73px;
     width: 245px;
 
     @include m.tablet {
       width: 445px;
+      margin-bottom: 95px;
+    }
+
+    @include m.desktop {
+      margin-bottom: 95px;
     }
   }
 }
 
-.modal__button-wrapper {
-  background-color: v.$color-background;
-  padding: 20px;
-  width: 100%;
-
-  @include m.tablet {
-    padding: 44px 91px;
-  }
-}
-
 .modal__button {
-  padding: 16px 20px;
   width: 100%;
   font-size: 18px;
 
@@ -114,10 +114,18 @@
 
   &--error {
     width: 180px;
+    padding: 16px 20px;
 
     @include m.tablet {
       width: 272px;
-      padding: 18px 20px 14px;
+    }
+  }
+
+  &--shipment {
+    padding: 18px 20px;
+
+    @include m.tablet {
+      width: 456px;
     }
   }
 }

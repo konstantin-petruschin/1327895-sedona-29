@@ -50,16 +50,17 @@
   background: url("../img/icons/check.svg") no-repeat;
 }
 
-.pick:hover .pick__mark,
-.pick:focus .pick__mark {
+.pick__input:hover + .pick__mark,
+.pick__input:focus + .pick__mark {
   background-color: v.$color-input-hover;
+  outline: none;
 }
 
-.pick:active .pick__mark {
+.pick__input:active .pick__mark {
   background-color: #d5d5d5;
 }
 
 
-.pick:active .pick__mark::before {
+.pick__input:active .pick__mark::before {
   opacity: 0.3;
 }

@@ -210,7 +210,7 @@
 
   <!-- Модальные окна -->
   <!-- добавить класс modal--open для проверки модального окна-->
-  <div class="modal">
+  <div class="modal modal--open">
     <div class="modal__container modal__container--error">
       <p class="modal__title title title--big">Что-то пошло не&nbsp;так!</p>
       <p class="modal__text modal__text--error">Проверьте поля выделенные красным, скорее всего вы забыли их заполнить
@@ -219,15 +219,12 @@
     </div>
   </div>
 
-  <div class="modal modal--open">
+  <div class="modal">
     <div class="modal__container modal__container--shipment">
       <p class="modal__title title title--big">Ваш отзыв отправлен!</p>
       <p class="modal__text modal__text--shipment">Спасибо за ваше участие, ваш отзыв уже поступил к нам.
         В&nbsp;ближайшее время мы опубликуем его на сайте.</p>
-      <div class="modal__button-wrapper">
-        <button class="modal__button button button--primary" type="button">Закрыть окно</button>
-      </div>
-
+        <button class="modal__button modal__button--shipment button button--primary" type="button">Закрыть окно</button>
     </div>
   </div>
 
