@@ -1,4 +1,4 @@
-@use "../comman/variables.scss" as v;
+@use "../common/variables.scss" as v;
 @use "../mixins/media.scss" as m;
 
 .advantages {
@@ -71,8 +71,9 @@
   list-style: none;
 
   @include m.tablet {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
   }
 }
 
@@ -81,12 +82,16 @@
   position: relative;
   padding-right: 20px;
   padding-left: 20px;
-  grid-column: 1 / 4;
+
+  @include m.tablet {
+    width: calc(100% / 3);
+  }
 
   &--back {
     background-color: v.$color-primary;
     color: v.$color-secondary;
     padding: 0;
+    width: 100%;
   }
 
   &:first-child::before {
@@ -107,18 +112,6 @@
       display: none;
     }
   }
-
-  &--area {
-    grid-column: 1 / 2;
-  }
-
-  &--road {
-    grid-column: 2 / 3;
-  }
-
-  &--tourists {
-    grid-column: 3 / 4;
-  }
 }
 
 .advantages__item-container {
@@ -134,22 +127,37 @@
 }
 
 .advantages__item-wrapper {
-  padding: 24px 17px;
-
-  @include m.tablet {
-    padding: 40px 12px;
-  }
-
-  @include m.desktop {
-    padding: 52px 37px;
-  }
-
+  padding: 24px 15px;
 
   &--no-back {
     border-bottom: 1px solid v.$color-border;
 
     @include m.tablet {
       border: none;
+      padding: 40px 18px;
+    }
+
+    @include m.desktop {
+      padding: 52px 37px;
+    }
+  }
+
+  &--tourists {
+    @include m.tablet {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    @include m.desktop {
+      padding-left: 37px;
+      padding-right: 37px;
+    }
+  }
+
+  &--city,
+  &--bridge {
+    @include m.tablet {
+      max-width: calc(100% / 3);
     }
   }
 
@@ -180,23 +188,14 @@
       padding-right: 83px;
     }
   }
-
-  &--city,
-  &--bridge {
-    @include m.tablet {
-      max-width: calc(100% / 3);
-    }
-  }
-
-  &--road {
-    @include m.tablet {
-      padding: 40px 20px;
-    }
-  }
 }
 
 .advantages__item:last-child .advantages__item-wrapper--no-back {
   border: none;
+}
+
+.advantages__image-wrapper {
+  flex-grow: 1;
 }
 
 .advantages__image {

@@ -1,6 +1,6 @@
 // Начните писать стили здесь
-@use "comman/fonts.scss";
-@use "comman/global.scss";
+@use "common/fonts.scss";
+@use "common/global.scss";
 @use "blocks/page-main.scss";
 @use "blocks/title.scss";
 @use "blocks/buttons.scss";
@@ -17,3 +17,4 @@
 @use "blocks/pick.scss";
 @use "blocks/photo-block.scss";
 @use "blocks/video-block.scss";
+@use "blocks/modal.scss";

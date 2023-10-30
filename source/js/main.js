@@ -12,35 +12,23 @@ toogleButtonElement.addEventListener('click', function () {
 })
 
 // карта
-ymaps.ready(init);
-const geoObjects = [];
-const marks = [
-  {
-    latitude: 34.869497,
-    longitude: -111.760186,
-    hintContent: '<div class="map__hint">Седона</div>'
-  }
-]
+const mapWrapper = document.querySelector('#map');
+
+if (mapWrapper) {
+  ymaps.ready(init);
+}
 
 function init() {
-  const myMap = new ymaps.Map("map", {
+  const myMap = new ymaps.Map('map', {
     center: [34.869497, -111.760186],
     zoom: 8
   });
 
-  marks.forEach(function(mark) {
-    geoObjects.push(new ymaps.Placemark([mark.latitude, mark.longitude], {
-      hintContent: mark.hintContent
+  myMap.geoObjects.add(new ymaps.Placemark([34.869497, -111.760186],
+    {
+      hintContent: '<div class="map__hint">Седона</div>'
     }, {
-      iconLayout: 'default#Image',
-      iconImageHref: '../img/icons/pin.svg',
-      iconImageSize: [27, 27]
+      preset: 'islands#circleIcon',
+      iconColor: '#81b3d3'
     }))
-  });
-
-
-  const clusterer = new ymaps.Clusterer()
-
-  myMap.geoObjects.add(clusterer)
-  clusterer.add(geoObjects)
 }

@@ -1,5 +1,5 @@
 @use "../mixins/media.scss" as m;
-@use "../comman/variables.scss" as v;
+@use "../common/variables.scss" as v;
 
 .form {
   @include m.tablet {
@@ -20,6 +20,7 @@
     border: none;
     padding-left: 60px;
     padding-right: 60px;
+    padding-bottom: 25px;
   }
 
   @include m.desktop {
@@ -50,7 +51,7 @@
     }
 
     @include m.desktop {
-      padding: 10px 120px 8px 48px;
+      padding: 10px 118px 8px 48px;
     }
   }
 
@@ -76,31 +77,35 @@
   &--description {
     grid-column: 1 / -1;
     width: 100%;
-    gap: 20px;
+    gap: 19px;
 
     @include m.tablet {
       padding-top: 18px;
+      gap: 16px;
+    }
+
+    @include m.desktop {
+      padding-top: 15px;
+      gap: 19px;
     }
   }
 
   &--submit {
     grid-column: 1 / -1;
-    padding-top: 30px;
-    padding-bottom: 15px;
-    gap: 3px;
+    padding-top: 31px;
+    padding-bottom: 23px;
+    gap: 2px;
 
     @include m.tablet {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       align-items: center;
-      padding-top: 25px;
-      padding-bottom: 65px;
+      padding-top: 22px;
+      padding-bottom: 63px;
     }
 
     @include m.desktop {
-      padding-left: 216px;
-      padding-right: 216px;
-      padding-top: 23px;
+      padding: 25px 216px 62px;
     }
   }
 }
@@ -112,6 +117,12 @@
 
   @include m.tablet {
     margin-bottom: 10px;
+  }
+
+  &--description {
+    @include m.desktop {
+      margin-bottom: 8px;
+    }
   }
 }
 
@@ -194,35 +205,44 @@
   display: flex;
   flex-direction: column;
   text-align: left;
-  // z-index: 1;
+  z-index: 1;
 
-  // &::after {
-  //   content: "";
-  //   position: absolute;
-  //   width: 58px;
-  //   height: 58px;
-  //   display: block;
-  //   color: red;
-  //   z-index: 10;
-  // }
+  &--tel::after,
+  &--email::after {
+    content: "";
+    position: absolute;
+    width: 57px;
+    height: 57px;
+    display: block;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-color: #e6e6e6;
+    bottom: 0;
+    right: 0;
+    z-index: 10;
+  }
+
+  &--tel::after {
+    background-image: url("../img/icons/phone.svg");
+  }
+
+  &--email::after {
+    background-image: url("../img/icons/mail.svg");
+  }
 }
 
 .form__name {
   margin-left: 14px;
 }
 
-.form__input-text--tel {
-  background-image: url("../img/icons/phone.svg");
-  background-repeat: no-repeat;
-}
-
 .form__group-comment {
   width: 100%;
   height: 150px;
   line-height: 25px;
+  resize: none;
 
   @include m.tablet {
-    height: 158px;
+    height: 160px;
   }
 
   @include m.desktop {
@@ -237,6 +257,15 @@
   padding: 19px;
   width: 100%;
   font-size: 18px;
+
+  @include m.tablet {
+    font-size: 21px;
+    padding: 17px;
+  }
+
+  // @include m.desktop {
+
+  // }
 }
 
 .form__info {

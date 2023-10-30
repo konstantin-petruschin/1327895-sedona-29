@@ -1,5 +1,5 @@
 @use "../mixins/media.scss" as m;
-@use "../comman/variables.scss" as v;
+@use "../common/variables.scss" as v;
 
 .input-text {
   font-family: "PT-Sans", sans-serif;
@@ -23,5 +23,9 @@
     outline: none;
     border-color: v.$color-input-hover;
     background-color: v.$color-secondary;
+  }
+
+  &:not(:placeholder-shown):invalid {
+    border-color: #ff8282;
   }
 }

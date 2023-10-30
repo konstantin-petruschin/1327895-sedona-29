@@ -1,14 +1,17 @@
 @use "../mixins/media.scss" as m;
-@use "../comman/variables.scss" as v;
+@use "../common/variables.scss" as v;
 
 .photo-block {
   @include m.tablet {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    padding: 48px 60px 0;
   }
 
   @include m.desktop {
     grid-template-columns: repeat(3, 1fr);
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 
@@ -19,11 +22,17 @@
 
   &:last-child {
     border-bottom: 1px solid v.$color-input-hover;
+
+    @include m.tablet {
+      border: none;
+    }
   }
 
   @include m.tablet {
     border: none;
     padding: 0;
+    display: flex;
+    flex-direction: column;
   }
 
   &--big {
@@ -47,16 +56,17 @@
   text-align: left;
   display: flex;
   flex-direction: column;
-  gap: 9px;
+  gap: 9px 30px;
   font-size: 14px;
   line-height: 21px;
 
   @include m.tablet {
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
-    padding: 22px 20px 15px;
+    align-items: flex-start;
+    padding: 18px 20px 14px;
     background-color: v.$color-background;
+    flex-grow: 1;
 
     &--back {
       background-color: #eaeaea;
@@ -69,10 +79,12 @@
     width: 100%;
     color: v.$color-secondary;
     background-color: rgba(v.$color-title, $alpha: 0.3);
-    padding: 17px 25px 17px;
+    padding: 15px 20px 18px 25px;
+  }
 
-    &--big {
-      padding: 22px 21px 15px;
+  &--big {
+    @include m.desktop {
+      padding: 18px 20px 14px;
     }
   }
 }
@@ -87,6 +99,22 @@
   display: flex;
   align-items: baseline;
   gap: 14px;
+
+  @include m.tablet {
+    gap: 9px;
+    margin-top: 9px;
+  }
+
+  @include m.desktop {
+    margin-top: 15px;
+    align-items: center;
+  }
+
+  &--big {
+    @include m.desktop {
+      margin-top: 11px;
+    }
+  }
 }
 
 .photo-block__likes-button {
@@ -108,6 +136,7 @@
 .photo-block__likes-button:hover .photo-block__icon,
 .photo-block__likes-button:focus .photo-block__icon {
   color: v.$color-primary-hover;
+  outline: none;
 }
 
 .photo-block__likes-button:active .photo-block__icon {

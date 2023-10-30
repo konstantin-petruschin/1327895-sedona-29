@@ -39,4 +39,14 @@
   display: block;
   width: 185px;
   z-index: 3;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+    outline: none;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
