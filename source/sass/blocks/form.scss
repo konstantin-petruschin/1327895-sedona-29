@@ -105,7 +105,7 @@
     }
 
     @include m.desktop {
-      padding: 25px 216px 65px;
+      padding: 25px 216px 62px;
     }
   }
 }
@@ -258,9 +258,14 @@
   width: 100%;
   font-size: 18px;
 
-  @include m.desktop {
-    padding: 18px;
+  @include m.tablet {
+    font-size: 21px;
+    padding: 17px;
   }
+
+  // @include m.desktop {
+
+  // }
 }
 
 .form__info {
