@@ -2,7 +2,7 @@
 @use "../common/variables.scss" as v;
 
 .heading {
-  padding: 36px 20px 28px;
+  padding: 36px 20px 27px;
   text-align: center;
 
   @include m.tablet {
@@ -28,7 +28,7 @@
 }
 
 .heading__title {
-  margin-bottom: 24px;
+  margin-bottom: 25px;
 
   @include m.tablet {
     margin-bottom: 19px;

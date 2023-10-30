@@ -16,7 +16,7 @@
 }
 
 .photo-block__item {
-  padding: 25px 20px 24px;
+  padding: 24px 20px;
   position: relative;
   border-top: 1px solid v.$color-input-hover;
 
@@ -44,7 +44,7 @@
 
 .photo-block__img {
   display: block;
-  margin-bottom: 12px;
+  margin-bottom: 13px;
   width: 100%;
 
   @include m.tablet {
@@ -56,7 +56,7 @@
   text-align: left;
   display: flex;
   flex-direction: column;
-  gap: 9px 30px;
+  gap: 11px 30px;
   font-size: 14px;
   line-height: 21px;
 
@@ -64,7 +64,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
-    padding: 18px 20px 14px;
+    padding: 21px 20px 14px;
     background-color: v.$color-background;
     flex-grow: 1;
 
@@ -102,7 +102,7 @@
 
   @include m.tablet {
     gap: 9px;
-    margin-top: 9px;
+    margin-top: 6px;
   }
 
   @include m.desktop {

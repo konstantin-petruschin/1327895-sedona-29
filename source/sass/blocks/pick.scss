@@ -5,6 +5,7 @@
   display: flex;
   align-items: center;
   cursor: pointer;
+  text-align: left;
 }
 
 .pick__name {
@@ -12,6 +13,11 @@
   font-size: 18px;
   font-weight: 700;
   margin-left: 16px;
+  max-width: 220px;
+
+  &--checkbox {
+    max-width: 175px;
+  }
 }
 
 .pick__mark {

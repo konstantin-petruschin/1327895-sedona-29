@@ -2,7 +2,7 @@
 @use "../common/variables.scss" as v;
 
 .video-block {
-  padding: 15px 20px 0;
+  padding: 17px 20px 0;
 
   @include m.tablet {
     padding: 62px 60px 40px;
@@ -15,6 +15,10 @@
 
 .video-block__title {
   margin-bottom: 27px;
+
+  @include m.tablet {
+    margin-bottom: 29px;
+  }
 
   @include m.desktop {
     margin-bottom: 30px;
