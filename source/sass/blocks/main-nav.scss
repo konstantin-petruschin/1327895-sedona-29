@@ -73,12 +73,13 @@
   width: 100%;
   display: inline-block;
   margin: 0 auto;
-  padding-top: 17px;
-  padding-bottom: 12px;
+  padding-top: 20px;
+  padding-bottom: 14px;
   box-shadow: 0 1px 0 0 rgba(1, 1, 1, 0.2), 0 1px 0 0 rgba(255, 255, 255, 0.2) inset;
   text-decoration: none;
   font-weight: 700;
   color: v.$color-secondary;
+  font-size: 18px;
 
   &:hover,
   &:focus {
@@ -93,6 +94,9 @@
   @include m.tablet {
     color: v.$color-title;
     box-shadow: none;
+    font-size: 14px;
+    padding-top: 18px;
+    padding-bottom: 12px;
   }
 
   &--current,
