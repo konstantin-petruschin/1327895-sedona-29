@@ -27,9 +27,11 @@
 
   &--min {
     font-size: 14px;
+    line-height: 24px;
 
     @include m.desktop {
       color: v.$color-secondary;
+      line-height: 26px;
     }
   }
 }

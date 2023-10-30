@@ -1,8 +1,10 @@
 @use "../mixins/media.scss" as m;
+@use "../common/variables.scss" as v;
 
 .promo {
   position: relative;
   min-height: 158px;
+  background-color: v.$color-primary;
 
   &::after {
     position: absolute;
@@ -49,7 +51,7 @@
 .promo__background {
   display: block;
   width: 100%;
-  background-position: bottom;
+  object-position: bottom;
   height: 158px;
 
   @include m.tablet {

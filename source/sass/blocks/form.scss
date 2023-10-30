@@ -92,7 +92,7 @@
 
   &--submit {
     grid-column: 1 / -1;
-    padding-top: 31px;
+    padding-top: 33px;
     padding-bottom: 23px;
     gap: 2px;
 
@@ -254,18 +254,13 @@
 
 .form__button {
   grid-column: 1 / 2;
-  padding: 19px;
+  padding: 16px;
   width: 100%;
-  font-size: 18px;
+  font-size: 21px;
 
   @include m.tablet {
-    font-size: 21px;
     padding: 17px;
   }
-
-  // @include m.desktop {
-
-  // }
 }
 
 .form__info {
