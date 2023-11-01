@@ -70,6 +70,25 @@ main {
   }
 }
 
+.no-js {
+  .main-nav {
+    display: block;
+    position: static;
+  }
+
+  .main-header__logo {
+    display: none;
+  }
+
+  .map__image {
+    display: block;
+  }
+
+  .map__yandex {
+    display: none;
+  }
+}
+
 .text-transfer {
   display: none;
 
