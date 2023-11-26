@@ -8,7 +8,7 @@
   background-color: rgba(v.$color-title, $alpha: 0.3);
 
   &--open {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     display: flex;
@@ -18,6 +18,10 @@
 }
 
 .modal__container {
+  position: fixed;
+  top: 50px;
+  left: 0;
+  right: 0;
   width: 100%;
   margin: auto;
   background-color: v.$color-secondary;
